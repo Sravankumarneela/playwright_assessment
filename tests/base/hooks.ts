@@ -1,13 +1,16 @@
 import { BeforeAll, AfterAll, Before, After } from '@cucumber/cucumber';
-import { chromium, Browser, Page, BrowserContext } from 'playwright';
+import { Browser, Page, BrowserContext } from 'playwright';
 import { pageFixture } from './pagefixture';
+import { invokeBrowser } from '../helpers/browsers/browserManager';
+import { getEnv } from '../helpers/Environment/env';
 
 let browser: Browser;
 let page: Page ;
 let context: BrowserContext;
 
 BeforeAll({ timeout: 30000 }, async function () {
-    browser = await chromium.launch({ headless: false });
+    getEnv();
+    browser = await invokeBrowser();
 });
 
 Before({ timeout: 30000 }, async function () {
@@ -15,7 +18,12 @@ Before({ timeout: 30000 }, async function () {
     const page = await context.newPage();
     pageFixture.page = page;
 
-    await page.goto('http://127.0.0.1:8082/login', {
+    const baseUrl = process.env.BASEURL;
+    if (!baseUrl) {
+        throw new Error('BASEURL is not configured');
+    }
+
+    await page.goto(baseUrl, {
         waitUntil: 'domcontentloaded',
         timeout: 30000,
     });

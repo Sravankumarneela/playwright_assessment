@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --config cucumber.json"
+    "test": "cross-env ENV=qa cucumber-js --config cucumber.json"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,11 @@
     "@cucumber/cucumber": "^13.2.1",
     "@playwright/test": "^1.62.1",
     "@types/node": "^26.4.1",
+    "dotenv": "^17.4.2",
     "ts-node": "^10.9.2",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "cross-env": "^10.1.0"
   }
 }
