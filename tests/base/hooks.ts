@@ -3,6 +3,8 @@ import { Browser, Page, BrowserContext } from 'playwright';
 import { pageFixture } from './pagefixture';
 import { invokeBrowser } from '../helpers/browsers/browserManager';
 import { getEnv } from '../helpers/Environment/env';
+import { createLogger } from 'winston';
+import { options } from '../helpers/util/logger';
 
 let browser: Browser;
 let page: Page ;
@@ -13,10 +15,12 @@ BeforeAll({ timeout: 30000 }, async function () {
     browser = await invokeBrowser();
 });
 
-Before({ timeout: 30000 }, async function () {
+Before({ timeout: 30000 }, async function ({pickle}) {
+    const scenarioName = pickle.name+pickle.id;
     context = await browser.newContext();
     const page = await context.newPage();
     pageFixture.page = page;
+    pageFixture.logger = createLogger(options(scenarioName)); // Assuming createLogger is defined elsewhere
 
     const baseUrl = process.env.BASEURL;
     if (!baseUrl) {
@@ -46,4 +50,5 @@ AfterAll(async function () {
     if (browser) {
         await browser.close();
     }
+    pageFixture.logger.close(); // Close the logger after all tests are done
 });
