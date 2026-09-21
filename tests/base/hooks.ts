@@ -1,10 +1,14 @@
-import { BeforeAll, AfterAll, Before, After } from '@cucumber/cucumber';
+import { BeforeAll, AfterAll, Before, After, setDefaultTimeout } from '@cucumber/cucumber';
 import { Browser, Page, BrowserContext } from 'playwright';
 import { pageFixture } from './pagefixture';
 import { invokeBrowser } from '../helpers/browsers/browserManager';
 import { getEnv } from '../helpers/Environment/env';
 import { createLogger } from 'winston';
 import { options } from '../helpers/util/logger';
+import { LoginPage } from '../FinsRetail/pages/LoginPage';
+import { MutualFundPage } from '../FinsRetail/pages/MutualFundPage';
+
+setDefaultTimeout(30000);
 
 let browser: Browser;
 let page: Page ;
@@ -21,6 +25,8 @@ Before({ timeout: 30000 }, async function ({pickle}) {
     const page = await context.newPage();
     pageFixture.page = page;
     pageFixture.logger = createLogger(options(scenarioName)); // Assuming createLogger is defined elsewhere
+    pageFixture.loginPage = new LoginPage(pageFixture.page, pageFixture.logger);
+    pageFixture.mutualFundPage = new MutualFundPage(pageFixture.page, pageFixture.logger);
 
     const baseUrl = process.env.BASEURL;
     if (!baseUrl) {

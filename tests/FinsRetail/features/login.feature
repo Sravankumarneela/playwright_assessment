@@ -8,6 +8,6 @@ Then User should be login successfully
 
 Scenario: User should not login successfully to the Fins Retail application
 Given User is on the login page
-When user enters the valid credentials
+When user enters the invalid email and password
 And User click on login button
-Then User should be login successfully
+Then User should be not login successfully
