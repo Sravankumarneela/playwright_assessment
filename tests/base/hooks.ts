@@ -7,6 +7,7 @@ import { createLogger } from 'winston';
 import { options } from '../helpers/util/logger';
 import { LoginPage } from '../FinsRetail/pages/LoginPage';
 import { MutualFundPage } from '../FinsRetail/pages/MutualFundPage';
+import { PortfolioPage } from '../FinsRetail/pages/PortfolioPage';
 
 setDefaultTimeout(30000);
 
@@ -27,6 +28,7 @@ Before({ timeout: 30000 }, async function ({pickle}) {
     pageFixture.logger = createLogger(options(scenarioName)); // Assuming createLogger is defined elsewhere
     pageFixture.loginPage = new LoginPage(pageFixture.page, pageFixture.logger);
     pageFixture.mutualFundPage = new MutualFundPage(pageFixture.page, pageFixture.logger);
+    pageFixture.portfolioPage = new PortfolioPage(pageFixture.page, pageFixture.logger);
 
     const baseUrl = process.env.BASEURL;
     if (!baseUrl) {

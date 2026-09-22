@@ -59,9 +59,37 @@ export class MutualFundPage {
         this.logger.info(`Navigated to login page: ${url}`);
     }
 
-    async openMutualFunds(): Promise<void> {
-        await this.mutualFundsLink.click();
+    async openMutualFunds(linkName: string): Promise<void> {
+        await this.page.getByRole("link", { name: linkName }).click();
         this.logger.info("Opened Mutual Funds");
+    }
+
+    mutualFundsOverviewLocators(validation: {
+        pageTestId: string;
+        pageLabel: string;
+        exploreHeading: string;
+        sectionSelector: string;
+        fundCardIds: string[];
+        featuredFundId: string;
+        featuredFundName: string;
+        navLabel: string;
+        detailsLinkId: string;
+    }): Locator[] {
+        const fundCardLocators = validation.fundCardIds.map((fundId) =>
+            this.page.getByTestId(`fund-card-${fundId}`)
+        );
+
+        return [
+            this.page.getByTestId(validation.pageTestId).getByText(validation.pageLabel, { exact: true }),
+            this.page.getByRole("heading", { name: validation.exploreHeading }),
+            this.page.locator(validation.sectionSelector),
+            ...fundCardLocators,
+            this.page.getByRole("heading", { name: validation.featuredFundName }),
+            this.page
+                .getByTestId(`fund-card-${validation.featuredFundId}`)
+                .getByText(validation.navLabel, { exact: false }),
+            this.page.getByTestId(`fund-details-link-${validation.detailsLinkId}`)
+        ];
     }
 
     async filterFundsByRisk(risk: string = "Low"): Promise<void> {

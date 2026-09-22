@@ -2,6 +2,7 @@ import { Page } from "playwright";
 import { Logger } from "winston";
 import { LoginPage } from "../FinsRetail/pages/LoginPage";
 import { MutualFundPage } from "../FinsRetail/pages/MutualFundPage";
+import { PortfolioPage } from "../FinsRetail/pages/PortfolioPage";
 
 export const pageFixture = {
     // @ts-ignore
@@ -10,5 +11,6 @@ export const pageFixture = {
     logger: undefined as Logger,
 
     loginPage: undefined as unknown as LoginPage,
-    mutualFundPage: undefined as unknown as MutualFundPage
+    mutualFundPage: undefined as unknown as MutualFundPage,
+    portfolioPage: undefined as unknown as PortfolioPage
 }

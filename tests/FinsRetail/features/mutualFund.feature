@@ -1,5 +1,10 @@
 Feature: Mutual fund investment
 
+	Scenario: Verify the mutual funds page
+		Given the user is logged in to the Fins Retail application
+		When the user opens Mutual Funds
+		Then the mutual funds page should display the expected products
+
 	Scenario: Place a SIP investment in a low-risk mutual fund
 		Given the user is logged in to the Fins Retail application
 		When the user opens Mutual Funds

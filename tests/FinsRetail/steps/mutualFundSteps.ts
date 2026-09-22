@@ -9,7 +9,13 @@ Given("the user is logged in to the Fins Retail application", async function () 
 });
 
 When("the user opens Mutual Funds", async function () {
-    await pageFixture.mutualFundPage.openMutualFunds();
+    await pageFixture.mutualFundPage.openMutualFunds(data.mutualFunds.linkName);
+});
+
+Then("the mutual funds page should display the expected products", async function () {
+    for (const detail of pageFixture.mutualFundPage.mutualFundsOverviewLocators(data.mutualFunds)) {
+        await expect(detail).toBeVisible();
+    }
 });
 
 When("the user filters funds by {string} risk", async function (risk: string) {

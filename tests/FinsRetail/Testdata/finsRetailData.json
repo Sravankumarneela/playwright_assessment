@@ -2,5 +2,53 @@
     "invalidUsername": "testuser",
     "invalidPassword": "testpassword",
     "username": "qauser@finserve.test",
-    "password": "Password@123"
+    "password": "Password@123",
+    "mutualFunds": {
+        "linkName": "Mutual Funds",
+        "pageTestId": "mutual-funds-page",
+        "pageLabel": "Mutual Funds",
+        "exploreHeading": "Explore mutual fund products",
+        "sectionSelector": "section",
+        "fundCardIds": [
+            "FSBAL007",
+            "FSBLU001"
+        ],
+        "featuredFundId": "FSBLU001",
+        "featuredFundName": "FinServe Bluechip Equity Fund",
+        "navLabel": "NAV ₹",
+        "detailsLinkId": "FSBLU001"
+    },
+    "portfolio": {
+        "linkName": "Portfolio",
+        "url": "http://127.0.0.1:8082/portfolio",
+        "holdingId": "4",
+        "redemptionMode": "amount",
+        "amount": "20",
+        "expectedHeading": "Redemption Submitted",
+        "investment": {
+            "risk": "Moderate",
+            "fundCode": "FSDIV012",
+            "fundName": "FinServe Dividend Yield Fund",
+            "investmentType": "lumpsum",
+            "amount": "10000",
+            "paymentMethod": "Net Banking",
+            "detailsHeading": "Investment Details",
+            "confirmationHeading": "Investment order placed successfully.",
+            "orderHeading": "Investment order placed",
+            "orderAmountPrefix": "Amount: ₹"
+        },
+        "verification": {
+            "mutualFundHoldingsHeading": "Mutual Fund Holdings",
+            "portfolioHeading": "Your Mutual Fund Portfolio",
+            "currentValueLabel": "Current Value ₹",
+            "investedAmountLabel": "Invested Amount ₹",
+            "gainLossTestId": "portfolio-gain-loss",
+            "returnText": "Return % 1.39%",
+            "gainLossLabel": "Gain / Loss ₹",
+            "holdingsHeading": "Holdings",
+            "holdingsSummaryText": "Fund-wise units, NAV,",
+            "holdingsDetailsText": "Holdings Fund-wise units, NAV, investment value, and redemption action. Folio"
+        }
+    }
 }
+
