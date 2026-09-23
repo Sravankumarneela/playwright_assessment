@@ -1,4 +1,5 @@
 import { Locator, Page } from "playwright";
+import { expect } from "playwright/test";
 import { Logger } from "winston";
 
 export class MutualFundPage {
@@ -6,6 +7,7 @@ export class MutualFundPage {
     readonly logger: Logger;
     readonly mutualFundsLink: Locator;
     readonly fundRiskFilter: Locator;
+    readonly fundSortSelect: Locator;
     readonly fundFilterSubmit: Locator;
     readonly fundDetailsLink: Locator;
     readonly minimumSip: Locator;
@@ -32,6 +34,7 @@ export class MutualFundPage {
         this.logger = logger;
         this.mutualFundsLink = page.getByRole("link", { name: "Mutual Funds" });
         this.fundRiskFilter = page.getByTestId("fund-risk-filter");
+        this.fundSortSelect = page.getByTestId("fund-sort-select");
         this.fundFilterSubmit = page.getByTestId("fund-filter-submit");
         this.fundDetailsLink = page.getByTestId("fund-details-link-FSLIQ009");
         this.minimumSip = page.getByText("Minimum SIP:", { exact: false });
@@ -98,7 +101,44 @@ export class MutualFundPage {
         this.logger.info(`Filtered funds by risk: ${risk}`);
     }
 
-    async openFundDetails(): Promise<void> {
+    async recordOneYearReturns(): Promise<number[]> {
+        const returnLocators = this.page.locator('[data-testid^="fund-return-"]');
+        const actualFundCount = await returnLocators.count();
+
+        const returns = [];
+
+        for (let index = 0; index < actualFundCount; index++) {
+            const returnText = await returnLocators.nth(index).innerText();
+            const returnValue = Number.parseFloat(returnText.replace(/[^\d.-]/g, ""));
+
+            if (Number.isNaN(returnValue)) {
+                throw new Error(`Unable to read one-year return at position ${index + 1}: ${returnText}`);
+            }
+
+            returns.push(returnValue);
+        }
+
+        return returns;
+    }
+
+    async verifyFundsOrderedByOneYearReturn(unsortedReturns: number[]): Promise<void> {
+        const sortedReturns = await this.recordOneYearReturns();
+        const expectedReturns = [...unsortedReturns].sort((first, second) => second - first);
+
+        expect(sortedReturns).toEqual(expectedReturns);
+    }
+
+    async sortFunds(sortOption: string): Promise<void> {
+        await this.fundSortSelect.selectOption(sortOption);
+        await this.fundFilterSubmit.click();
+        this.logger.info(`Sorted mutual funds using option: ${sortOption}`);
+    }
+
+    async openFundDetails(fundCode: string): Promise<void> {
+        if (fundCode !== "FSLIQ009") {
+            throw new Error(`Unsupported fund code: ${fundCode}`);
+        }
+
         await this.fundDetailsLink.click();
         await this.minimumSip.click();
         this.logger.info("Opened FSLIQ009 fund details");

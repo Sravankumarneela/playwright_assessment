@@ -12,6 +12,18 @@ When("the user opens Mutual Funds", async function () {
     await pageFixture.mutualFundPage.openMutualFunds(data.mutualFunds.linkName);
 });
 
+When("the user records the unsorted one-year returns for all displayed funds", async function () {
+    this.unsortedOneYearReturns = await pageFixture.mutualFundPage.recordOneYearReturns();
+});
+
+When("the user sorts funds using the configured one-year return option", async function () {
+    await pageFixture.mutualFundPage.sortFunds(data.mutualFunds.sortRegression.sortOption);
+});
+
+Then("the funds should be ordered by one-year return from high to low", async function () {
+    await pageFixture.mutualFundPage.verifyFundsOrderedByOneYearReturn(this.unsortedOneYearReturns);
+});
+
 Then("the mutual funds page should display the expected products", async function () {
     for (const detail of pageFixture.mutualFundPage.mutualFundsOverviewLocators(data.mutualFunds)) {
         await expect(detail).toBeVisible();
@@ -23,10 +35,7 @@ When("the user filters funds by {string} risk", async function (risk: string) {
 });
 
 When("the user opens fund {string} details", async function (fundCode: string) {
-    if (fundCode !== "FSLIQ009") {
-        throw new Error(`Unsupported fund code: ${fundCode}`);
-    }
-    await pageFixture.mutualFundPage.openFundDetails();
+    await pageFixture.mutualFundPage.openFundDetails(fundCode);
 });
 
 When("the user starts an investment", async function () {

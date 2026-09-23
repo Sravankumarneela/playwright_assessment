@@ -9,6 +9,7 @@ export class LoginPage {
     readonly password:Locator;
     readonly loginButton:Locator;
     readonly successIndicator: Locator;
+    readonly logoutButton: Locator;
 
     constructor(page: Page, logger: Logger) {
         this.page = page;
@@ -17,6 +18,7 @@ export class LoginPage {
         this.loginButton = page.locator('button[type="submit"]');
         this.password = page.locator('[name="password"]');
         this.successIndicator = this.page.getByRole('link', { name: 'FS FinServe Retail' });
+        this.logoutButton = page.getByTestId('logout-button');
     }
 
     async enterloginDetails(email: string, password: string) {
@@ -39,6 +41,37 @@ export class LoginPage {
         const isVisible = await this.successIndicator.isVisible({ timeout: 10000 });
         this.logger.info(`Login success indicator visibility: ${isVisible}`);
         return isVisible;
+    }
+
+    async logout(): Promise<void> {
+        await this.logoutButton.click();
+        this.logger.info('Logged out of the Fins Retail application');
+    }
+
+    async verifyLogoutMessage(): Promise<void> {
+        const flashStatus = this.page.getByTestId('flash-status');
+        await flashStatus.waitFor({ state: 'visible' });
+
+        if (!(await flashStatus.innerText()).trim()) {
+            throw new Error('Logout confirmation is visible but contains no message');
+        }
+    }
+
+    async submitEmptyLogin(): Promise<void> {
+        await this.loginButton.click();
+    }
+
+    async verifyValidationMessages(messages: string[]): Promise<void> {
+        for (const message of messages) {
+            await this.page.getByTestId('login-form').getByText(message, { exact: false }).waitFor({ state: 'visible' });
+        }
+    }
+
+    async verifyInvalidCredentials(username: string, password: string, errorMessage: string): Promise<void> {
+        await this.enterloginDetails(username, password);
+        await this.clickLoginButton();
+        await this.page.getByTestId('form-error-summary').getByText(errorMessage, { exact: false }).waitFor({ state: 'visible' });
+        await this.page.getByTestId('login-form').getByText(errorMessage, { exact: false }).waitFor({ state: 'visible' });
     }
 
 }

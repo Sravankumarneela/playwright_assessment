@@ -1,13 +1,24 @@
 import { chromium, firefox, LaunchOptions, webkit } from "playwright";
 
+const getLaunchOptions = (): LaunchOptions => {
+    const headlessValue = process.env.HEADLESS?.trim().toLowerCase();
 
-const options: LaunchOptions = {
-    headless: false,
-    args: ["--start-maximized"],
+    if (headlessValue !== "true" && headlessValue !== "false") {
+        throw new Error('HEADLESS must be set to either "true" or "false"');
+    }
+
+    const headless = headlessValue === "true";
+
+    return {
+        headless,
+        args: headless ? [] : ["--start-maximized"]
+    };
 };
 
 export const invokeBrowser = async () => {
     const browserType = process.env.BROWSER;
+    const options = getLaunchOptions();
+
     switch (browserType) {
         case "chromium":
            return chromium.launch(options);

@@ -1,10 +1,12 @@
 Feature: Portfolio redemption
 
+    @portfolio_TC01 @portfolio
     Scenario: Verify the portfolio overview
         Given the user is logged in to the Fins Retail application for portfolio
         When the user opens the portfolio
         Then the portfolio overview should display the expected details
 
+    @portfolio_TC02 @portfolio
     Scenario: Redeem an amount from a portfolio holding
         Given the user is logged in to the Fins Retail application for portfolio
         When the user opens the portfolio
@@ -13,6 +15,7 @@ Feature: Portfolio redemption
         And the user submits the portfolio redemption
         Then the portfolio redemption should be submitted
 
+    @portfolio_TC03 @portfolio
     Scenario: Invest in a moderate-risk fund from the portfolio
         Given the user is logged in to the Fins Retail application for portfolio
         When the user opens the portfolio

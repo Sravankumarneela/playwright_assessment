@@ -1,10 +1,20 @@
 Feature: Mutual fund investment
 
+	@mutualfund_TC01 @mutualfund
 	Scenario: Verify the mutual funds page
 		Given the user is logged in to the Fins Retail application
 		When the user opens Mutual Funds
 		Then the mutual funds page should display the expected products
+		
+	@mutualfund_TC02 @mutualfund @bug
+	Scenario: Verify mutual funds can be sorted by one-year return
+		Given the user is logged in to the Fins Retail application
+		When the user opens Mutual Funds
+		And the user records the unsorted one-year returns for all displayed funds
+		And the user sorts funds using the configured one-year return option
+		Then the funds should be ordered by one-year return from high to low
 
+	@mutualfund_TC03 @mutualfund
 	Scenario: Place a SIP investment in a low-risk mutual fund
 		Given the user is logged in to the Fins Retail application
 		When the user opens Mutual Funds
@@ -18,6 +28,7 @@ Feature: Mutual fund investment
 		Then the investment order should be placed
 		And the investment order details should be displayed
 
+	@mutualfund_TC04 @mutualfund
 	Scenario: Place a lump-sum investment of 100000 in a low-risk mutual fund
 		Given the user is logged in to the Fins Retail application
 		When the user opens Mutual Funds

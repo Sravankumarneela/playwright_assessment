@@ -3,6 +3,16 @@
     "invalidPassword": "testpassword",
     "username": "qauser@finserve.test",
     "password": "Password@123",
+    "login": {
+        "logoutMessage": "Logged out successfully",
+        "emptyValidationMessages": [
+            "Email",
+            "Password"
+        ],
+        "wrongUsername": "wronguser@finserve.test",
+        "wrongPassword": "WrongPassword@123",
+        "invalidCredentialsMessage": "Invalid email or password."
+    },
     "mutualFunds": {
         "linkName": "Mutual Funds",
         "pageTestId": "mutual-funds-page",
@@ -16,7 +26,222 @@
         "featuredFundId": "FSBLU001",
         "featuredFundName": "FinServe Bluechip Equity Fund",
         "navLabel": "NAV ₹",
-        "detailsLinkId": "FSBLU001"
+        "detailsLinkId": "FSBLU001",
+        "sortRegression": {
+            "sortOption": "one_year_return_desc"
+        }
+    },
+    "insurance": {
+        "linkName": "Insurance",
+        "pageHeading": "Insurance Products",
+        "browseText": "Browse protection products",
+        "filterFormTestId": "insurance-filter-form",
+        "searchText": "Search",
+        "insuranceTypeText": "Insurance Type All Types Term",
+        "premiumRangeText": "Premium Range All Premiums",
+        "filterSubmitTestId": "insurance-filter-submit",
+        "filterResetTestId": "insurance-filter-reset",
+        "insuranceCardIds": [
+            "FSLIFE002",
+            "FSLIFE001"
+        ],
+        "featuredProductName": "FinServe Secure Future Term",
+        "featuredProductDescription": "FinServe Secure Future Term Plan is a seeded demo insurance product for black-",
+        "detailsLinkId": "FSLIFE002",
+        "buyLinkId": "FSLIFE002",
+        "search": {
+            "term": "term",
+            "resultIds": [
+                "FSLIFE002",
+                "FSLIFE001"
+            ]
+        },
+        "filters": {
+            "healthType": "Health Insurance",
+            "premiumRange": "under_5000",
+            "premiumResultIds": [
+                "FSMOTO006",
+                "FSTRVL007"
+            ],
+            "healthResultIds": [
+                "FSACCD008",
+                "FSHLTH003",
+                "FSHLTH004"
+            ]
+        },
+        "purchase": {
+            "type": "Term Insurance",
+            "productId": "FSLIFE002",
+            "dateOfBirth": "1998-02-16",
+            "nomineeRelationship": "Spouse",
+            "firstNames": [
+                "Aarav",
+                "Ishita",
+                "Vihaan",
+                "Ananya",
+                "Rohan"
+            ],
+            "lastNames": [
+                "Sharma",
+                "Mehta",
+                "Kapoor",
+                "Nair",
+                "Iyer"
+            ],
+            "coverageAmount": "₹5,000,000",
+            "confirmation": {
+                "heading": "Policy Created Successfully",
+                "policyNumberTestId": "confirmation-policy-number",
+                "transactionReferenceTestId": "confirmation-transaction-reference",
+                "coverageAmount": "₹5,000,000",
+                "productName": "FinServe Secure Future Term Plan",
+                "viewPolicyLinkTestId": "view-created-policy-link",
+                "viewTransactionsLinkTestId": "view-transactions-link"
+            }
+        },
+        "futureDobRegression": {
+            "type": "Term Insurance",
+            "productId": "FSLIFE002",
+            "futureDateOffsetYears": 1,
+            "nomineeRelationship": "Spouse",
+            "firstNames": [
+                "Aarav",
+                "Ishita",
+                "Vihaan",
+                "Ananya",
+                "Rohan"
+            ],
+            "lastNames": [
+                "Sharma",
+                "Mehta",
+                "Kapoor",
+                "Nair",
+                "Iyer"
+            ]
+        }
+    },
+    "policies": {
+        "overview": {
+            "heading": "My Policies",
+            "description": "Review policy status,",
+            "statusFilterText": "Policy Status All Statuses",
+            "tableText": "Policy Number Product",
+            "policyIds": [
+                "34",
+                "33"
+            ],
+            "statusIds": [
+                "34",
+                "33",
+                "32"
+            ],
+            "coverageDate": "Sep 2046",
+            "coverageAmount": "₹5,000,000",
+            "premiumAmount": "₹9,200",
+            "productName": "FinServe Secure Future Term",
+            "columnHeaders": [
+                "Status",
+                "Coverage",
+                "Premium",
+                "Product",
+                "Policy Number"
+            ]
+        },
+        "statusFilter": {
+            "value": "Active",
+            "resultPolicyIds": [
+                "34",
+                "33",
+                "32"
+            ]
+        },
+        "details": {
+            "policyId": "34",
+            "policyNumberText": "Active POL-20260923-7Y87Z9",
+            "productName": "FinServe Secure Future Term",
+            "detailsPageTestId": "policy-details-page",
+            "status": "Active",
+            "downloadButtonTestId": "download-policy-button"
+        },
+        "download": {
+            "policyId": "34",
+            "downloadButtonTestId": "download-policy-button",
+            "failureMessage": "BUG: Policy file was not downloaded after clicking the download button for policy 34"
+        }
+    },
+    "transactions": {
+        "overview": {
+            "historyText": "Transaction History",
+            "heading": "Transactions",
+            "description": "Search and filter your",
+            "filtersCardTestId": "transaction-filters-card",
+            "searchText": "Search",
+            "typeText": "Type All Types Investment",
+            "fromText": "From",
+            "toText": "To",
+            "filterSubmitTestId": "transaction-filter-submit",
+            "filterResetTestId": "transaction-filter-reset",
+            "tableCardTestId": "transactions-table-card",
+            "transactionId": "TXN-20260923183954-M5184",
+            "columnHeaders": ["Action", "Amount", "Product", "Type", "Date", "Reference", "Status"],
+            "amount": "₹",
+            "productName": "FinServe Secure Future Term",
+            "transactionTypeTestId": "transaction-type-TXN-20260923183954-M5184",
+            "date": "Sep 2026",
+            "referenceTestId": "transaction-reference-TXN-20260923183954-M5184",
+            "statusTestId": "transaction-status-TXN-20260923183954-M5184"
+        },
+        "filters": {
+            "searchTerms": ["term", "fund"],
+            "type": "Investment",
+            "status": "SUCCESS",
+            "dateFrom": "2026-09-16",
+            "dateTo": "2026-09-30",
+            "resultTransactionIds": ["TXN-20260923172858-LSPLY"]
+        },
+        "details": {
+            "transactionId": "TXN-20260923172858-LSPLY",
+            "reference": "TXN-20260923172858-LSPLY",
+            "heading": "TXN-20260923172858-LSPLY",
+            "description": "Review the selected",
+            "summaryText": "Reference TXN-20260923172858-LSPLY Status SUCCESS Type Investment Product Type",
+            "referenceTestId": "transaction-detail-reference",
+            "statusTestId": "transaction-detail-status",
+            "productTypeTestId": "transaction-detail-product-type",
+            "productNameText": "Product Name FinServe",
+            "amountText": "Amount ₹",
+            "backLinkTestId": "back-to-transactions"
+        },
+        "pagination": {
+            "maxArrowWidth": 24,
+            "maxArrowHeight": 24,
+            "failureMessage": "BUG: Transaction pagination arrow images are too large"
+        }
+    },
+    "support": {
+        "overview": {
+            "customerSupportText": "Customer Support",
+            "heading": "Raise Support Request",
+            "description": "Submit a simple support",
+            "categoryText": "Category Select Category",
+            "messageLabel": "Message"
+        },
+        "invalidMessage": {
+            "category": "Investment Issue",
+            "message": "test 123",
+            "errorText": "10 characters"
+        },
+        "validRequest": {
+            "category": "Profile Issue",
+            "message": "test 123fdfhfdkjfhfdjfdjfhjkdfh",
+            "confirmation": {
+                "heading": "Support Request Submitted",
+                "messageTestId": "support-confirmation-message",
+                "statusText": "Status Open",
+                "raiseAnotherTestId": "raise-another-support-request",
+                "dashboardTestId": "support-back-dashboard"
+            }
+        }
     },
     "portfolio": {
         "linkName": "Portfolio",
