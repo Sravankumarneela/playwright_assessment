@@ -278,3 +278,6 @@ npm test -- --tags "@bug"
 - `tests/helpers/browsers/browserManager.ts`: browser selection and launch
 - `tests/helpers/Environment/env.ts`: environment file loading
 - `tests/helpers/util/logger.ts`: scenario log configuration
+- `known-limitations.md`: current framework, environment, data, and defect limitations
+- `reset-notes.md`: state reset procedure and post-reset execution guidance
+- `qa-summary.md`: QA coverage, execution status, risk assessment, and release recommendation
