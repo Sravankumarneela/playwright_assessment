@@ -1,0 +1,4 @@
+INFO: 2026-09-23 22:10:37: 	Entered login details: qauser@finserve.test
+INFO: 2026-09-23 22:10:38: 	Clicked on login button
+INFO: 2026-09-23 22:10:39: 	Opened Mutual Funds
+INFO: 2026-09-23 22:10:40: 	Sorted mutual funds using option: one_year_return_desc

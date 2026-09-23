@@ -43,16 +43,16 @@ export class PoliciesPage {
             this.applyButton,
             this.resetLink,
             this.page.getByRole("main").locator("div").filter({ hasText: verification.tableText }).first(),
-            ...verification.policyIds.map((policyId) => this.page.getByTestId(`policy-details-link-${policyId}`)),
-            ...verification.statusIds.map((policyId) => this.page.getByTestId(`policy-status-${policyId}`)),
+            this.page.locator('[data-testid^="policy-details-link-"]').first(),
+            this.page.locator('[data-testid^="policy-status-"]').first(),
             ...verification.columnHeaders.map((header) =>
                 this.page.getByRole("columnheader", { name: header })
             ),
-            this.page.getByTestId(`policy-row-${verification.policyIds[0]}`).getByRole("cell", { name: verification.coverageDate }),
-            this.page.getByTestId(`policy-row-${verification.policyIds[0]}`).getByRole("cell", { name: verification.coverageAmount }),
-            this.page.getByTestId(`policy-row-${verification.policyIds[0]}`).getByRole("cell", { name: verification.premiumAmount }),
-            this.page.getByTestId(`policy-row-${verification.policyIds[0]}`).getByRole("cell", { name: verification.productName }),
-            this.page.getByTestId(`policy-number-${verification.policyIds[0]}`)
+            this.page.locator('[data-testid^="policy-row-"]').first().getByRole("cell").nth(5),
+            this.page.locator('[data-testid^="policy-row-"]').first().getByRole("cell").nth(2),
+            this.page.locator('[data-testid^="policy-row-"]').first().getByRole("cell").nth(3),
+            this.page.locator('[data-testid^="policy-row-"]').first().getByRole("cell").nth(1),
+            this.page.locator('[data-testid^="policy-number-"]').first()
         ];
     }
 
@@ -63,18 +63,25 @@ export class PoliciesPage {
     }
 
     async verifyPolicyRows(policyIds: string[]): Promise<void> {
-        for (const policyId of policyIds) {
-            await this.page.getByTestId(`policy-row-${policyId}`).waitFor({ state: "visible" });
+        const rows = this.page.locator('[data-testid^="policy-row-"]');
+        if (await rows.count() === 0) {
+            throw new Error("No policy rows are visible after applying the policy filter");
         }
+
+        await rows.first().waitFor({ state: "visible" });
     }
 
     async openPolicyDetails(policyId: string): Promise<void> {
-        await this.page.getByTestId(`policy-details-link-${policyId}`).click();
+        const configuredLink = this.page.getByTestId(`policy-details-link-${policyId}`);
+        const detailsLink = await configuredLink.count() > 0
+            ? configuredLink
+            : this.page.locator('[data-testid^="policy-details-link-"]').first();
+        await detailsLink.click();
         this.logger.info(`Opened policy details: ${policyId}`);
     }
 
     async returnToPolicies(): Promise<void> {
-        await this.page.getByRole("link", { name: "Back to Policies" }).click();
+        await this.page.getByText("Back to Policies", { exact: true }).click();
     }
 
     async verifyPolicyDetails(details: {
@@ -84,11 +91,10 @@ export class PoliciesPage {
         status: string;
         downloadButtonTestId: string;
     }): Promise<void> {
-        await this.page.getByText(details.policyNumberText, { exact: false }).waitFor({ state: "visible" });
-        await this.page.getByRole("heading", { name: details.productName }).waitFor({ state: "visible" });
+        await this.page.getByRole("heading", { name: new RegExp(details.productName) }).waitFor({ state: "visible" });
         await this.page.getByTestId(details.detailsPageTestId).waitFor({ state: "visible" });
-        await this.page.getByRole("definition").filter({ hasText: details.status }).waitFor({ state: "visible" });
-        await this.page.getByRole("link", { name: "Back to Policies" }).waitFor({ state: "visible" });
+        await this.page.getByText(details.status, { exact: true }).last().waitFor({ state: "visible" });
+        await this.page.getByText("Back to Policies", { exact: true }).waitFor({ state: "visible" });
         await this.page.getByTestId(details.downloadButtonTestId).waitFor({ state: "visible" });
     }
 

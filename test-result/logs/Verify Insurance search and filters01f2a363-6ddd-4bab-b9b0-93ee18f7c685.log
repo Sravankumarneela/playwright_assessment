@@ -1,0 +1,8 @@
+INFO: 2026-09-23 22:09:58: 	Entered login details: qauser@finserve.test
+INFO: 2026-09-23 22:09:59: 	Clicked on login button
+INFO: 2026-09-23 22:10:00: 	Opened Insurance
+INFO: 2026-09-23 22:10:01: 	Searched insurance products for: term
+INFO: 2026-09-23 22:10:01: 	Reset insurance filters
+INFO: 2026-09-23 22:10:02: 	Applied insurance filters
+INFO: 2026-09-23 22:10:03: 	Reset insurance filters
+INFO: 2026-09-23 22:10:03: 	Applied insurance filters

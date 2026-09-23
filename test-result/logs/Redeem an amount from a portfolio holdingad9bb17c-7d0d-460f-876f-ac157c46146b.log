@@ -1,0 +1,6 @@
+INFO: 2026-09-23 22:11:23: 	Entered login details: qauser@finserve.test
+INFO: 2026-09-23 22:11:25: 	Clicked on login button
+INFO: 2026-09-23 22:11:26: 	Opened portfolio: http://127.0.0.1:8082/portfolio
+INFO: 2026-09-23 22:11:27: 	Started redemption for holding: 4
+INFO: 2026-09-23 22:11:27: 	Entered redemption amount: 20
+INFO: 2026-09-23 22:11:28: 	Submitted redemption

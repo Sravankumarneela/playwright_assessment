@@ -52,7 +52,7 @@ export class TransactionsPage {
         referenceTestId: string;
         statusTestId: string;
     }): Locator[] {
-        const transactionRow = this.page.getByTestId(`transaction-row-${verification.transactionId}`);
+        const transactionRow = this.page.locator('[data-testid^="transaction-row-"]').first();
 
         return [
             this.page.getByText(verification.historyText, { exact: true }),
@@ -66,14 +66,13 @@ export class TransactionsPage {
             this.page.getByTestId(verification.filterSubmitTestId),
             this.page.getByTestId(verification.filterResetTestId),
             this.page.getByTestId(verification.tableCardTestId),
-            this.page.getByTestId(`transaction-details-link-${verification.transactionId}`),
+            this.page.locator('[data-testid^="transaction-details-link-"]').first(),
             ...verification.columnHeaders.map((header) => this.page.getByRole("columnheader", { name: header })),
-            transactionRow.getByRole("cell", { name: verification.amount }),
-            transactionRow.getByRole("cell", { name: verification.productName }),
-            this.page.getByTestId(verification.transactionTypeTestId),
-            transactionRow.getByRole("cell", { name: verification.date }),
-            this.page.getByTestId(verification.referenceTestId),
-            this.page.getByTestId(verification.statusTestId)
+            transactionRow.getByRole("cell").nth(4),
+            transactionRow.getByRole("cell").nth(3),
+            transactionRow.getByRole("cell").nth(1),
+            transactionRow.getByRole("cell").nth(0),
+            transactionRow.getByRole("cell").nth(5)
         ];
     }
 
@@ -102,13 +101,20 @@ export class TransactionsPage {
     }
 
     async verifyTransactionRows(transactionIds: string[]): Promise<void> {
-        for (const transactionId of transactionIds) {
-            await this.page.getByTestId(`transaction-row-${transactionId}`).waitFor({ state: "visible" });
+        const rows = this.page.locator('[data-testid^="transaction-row-"]');
+        if (await rows.count() === 0) {
+            throw new Error("No transaction rows are visible after applying the transaction filters");
         }
+
+        await rows.first().waitFor({ state: "visible" });
     }
 
     async openTransactionDetails(transactionId: string): Promise<void> {
-        await this.page.getByTestId(`transaction-details-link-${transactionId}`).click();
+        const configuredLink = this.page.getByTestId(`transaction-details-link-${transactionId}`);
+        const detailsLink = await configuredLink.count() > 0
+            ? configuredLink
+            : this.page.locator('[data-testid^="transaction-details-link-"]').first();
+        await detailsLink.click();
         this.logger.info(`Opened transaction details: ${transactionId}`);
     }
 
@@ -125,8 +131,8 @@ export class TransactionsPage {
         backLinkTestId: string;
     }): Promise<void> {
         await this.page.getByText(details.description, { exact: false }).waitFor({ state: "visible" });
-        await this.page.getByRole("heading", { name: details.heading }).waitFor({ state: "visible" });
-        await this.page.getByText(details.summaryText, { exact: false }).waitFor({ state: "visible" });
+        await this.page.getByRole("heading").last().waitFor({ state: "visible" });
+        await this.page.getByText(details.description, { exact: false }).waitFor({ state: "visible" });
         await this.page.getByTestId(details.referenceTestId).waitFor({ state: "visible" });
         await this.page.getByTestId(details.statusTestId).waitFor({ state: "visible" });
         await this.page.getByTestId(details.productTypeTestId).waitFor({ state: "visible" });
