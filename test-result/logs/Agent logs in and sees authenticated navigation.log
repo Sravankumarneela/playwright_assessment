@@ -1,18 +1,21 @@
-INFO: 2026-10-25 17:26:51: 	Starting scenario: Agent logs in and sees authenticated navigation
-INFO: 2026-10-25 17:26:51: 	Initialized login page object
-INFO: 2026-10-25 17:26:51: 	Initialized products page object
-INFO: 2026-10-25 17:26:51: 	Initialized support page object
-INFO: 2026-10-25 17:26:51: 	Initialized applications page object
-INFO: 2026-10-25 17:26:51: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:26:51: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:26:52: 	Step: enter configured login credentials
-INFO: 2026-10-25 17:26:52: 	Entering configured login credentials
-INFO: 2026-10-25 17:26:52: 	Step: verify configured login form content
-INFO: 2026-10-25 17:26:52: 	Checking configured login form content
-INFO: 2026-10-25 17:26:52: 	Step: submit the login form
-INFO: 2026-10-25 17:26:52: 	Submitting the login form
-INFO: 2026-10-25 17:26:54: 	Step: click the navigation brand
-INFO: 2026-10-25 17:26:54: 	Clicking the navigation brand
-INFO: 2026-10-25 17:26:54: 	Step: verify authenticated navigation
-INFO: 2026-10-25 17:26:54: 	Checking authenticated navigation
-INFO: 2026-10-25 17:26:54: 	Finishing scenario: Agent logs in and sees authenticated navigation (PASSED)
+INFO: 2026-10-25 19:34:01: 	Starting scenario: Agent logs in and sees authenticated navigation
+INFO: 2026-10-25 19:34:02: 	Initialized login page object
+INFO: 2026-10-25 19:34:02: 	Initialized products page object
+INFO: 2026-10-25 19:34:02: 	Initialized support page object
+INFO: 2026-10-25 19:34:02: 	Initialized applications page object
+INFO: 2026-10-25 19:34:02: 	Initialized dashboard page object
+INFO: 2026-10-25 19:34:02: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:34:02: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:34:02: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:34:02: 	Entering configured login credentials
+INFO: 2026-10-25 19:34:02: 	Step: verify configured login form content
+INFO: 2026-10-25 19:34:02: 	Checking configured login form content
+INFO: 2026-10-25 19:34:02: 	Step: submit the login form
+INFO: 2026-10-25 19:34:02: 	Submitting the login form
+INFO: 2026-10-25 19:34:04: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:34:04: 	Checking authenticated navigation
+INFO: 2026-10-25 19:34:04: 	Step: click the navigation brand
+INFO: 2026-10-25 19:34:04: 	Clicking the navigation brand
+INFO: 2026-10-25 19:34:04: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:34:04: 	Checking authenticated navigation
+INFO: 2026-10-25 19:34:04: 	Finishing scenario: Agent logs in and sees authenticated navigation (PASSED)

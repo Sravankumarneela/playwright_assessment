@@ -1,37 +1,38 @@
-INFO: 2026-10-25 17:25:12: 	Starting scenario: Submit an application with the ID proof document
-INFO: 2026-10-25 17:25:12: 	Initialized login page object
-INFO: 2026-10-25 17:25:12: 	Initialized products page object
-INFO: 2026-10-25 17:25:12: 	Initialized support page object
-INFO: 2026-10-25 17:25:12: 	Initialized applications page object
-INFO: 2026-10-25 17:25:12: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:25:12: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:25:13: 	Step: enter configured login credentials
-INFO: 2026-10-25 17:25:13: 	Entering configured login credentials
-INFO: 2026-10-25 17:25:13: 	Step: submit the login form
-INFO: 2026-10-25 17:25:13: 	Submitting the login form
-INFO: 2026-10-25 17:25:15: 	Step: verify authenticated navigation
-INFO: 2026-10-25 17:25:15: 	Checking authenticated navigation
-INFO: 2026-10-25 17:25:15: 	Step: prepare application scenario 'noRiders' through rider details
-INFO: 2026-10-25 17:25:15: 	Preparing configured application scenario 'noRiders'
-INFO: 2026-10-25 17:25:15: 	Preparing application scenario 'noRiders' through rider details
-INFO: 2026-10-25 17:25:15: 	Loading application scenario 'noRiders' from test data
-INFO: 2026-10-25 17:25:15: 	Creating a new application draft
-INFO: 2026-10-25 17:25:15: 	Opening the Applications page
-INFO: 2026-10-25 17:25:17: 	Filling configured client details for applicant 'standard'
-INFO: 2026-10-25 17:25:18: 	Filling configured address and contact details
-INFO: 2026-10-25 17:25:19: 	Filling configured KYC and financial details
-INFO: 2026-10-25 17:25:21: 	Filling product and policy details for 'eliteLegacy'
-INFO: 2026-10-25 17:25:22: 	Selecting 0 configured rider(s)
-INFO: 2026-10-25 17:25:23: 	Step: save configured beneficiaries and proceed to document upload
-INFO: 2026-10-25 17:25:23: 	Saving configured application beneficiaries
-INFO: 2026-10-25 17:25:23: 	Loading application scenario 'noRiders' from test data
-INFO: 2026-10-25 17:25:23: 	Filling configured beneficiary 'adultPrimary'
-INFO: 2026-10-25 17:25:25: 	Step: upload the configured test document
-INFO: 2026-10-25 17:25:25: 	Uploading configured application test document
-INFO: 2026-10-25 17:25:25: 	Step: review, validate, and submit the application
-INFO: 2026-10-25 17:25:25: 	Reviewing, validating, and submitting application
-INFO: 2026-10-25 17:25:25: 	Continuing from document upload to application review
-INFO: 2026-10-25 17:25:26: 	Running review validation before submitting application
-INFO: 2026-10-25 17:25:28: 	Step: verify application submission confirmation
-INFO: 2026-10-25 17:25:28: 	Checking application submission confirmation
-INFO: 2026-10-25 17:25:28: 	Finishing scenario: Submit an application with the ID proof document (PASSED)
+INFO: 2026-10-25 19:32:01: 	Starting scenario: Submit an application with the ID proof document
+INFO: 2026-10-25 19:32:01: 	Initialized login page object
+INFO: 2026-10-25 19:32:01: 	Initialized products page object
+INFO: 2026-10-25 19:32:01: 	Initialized support page object
+INFO: 2026-10-25 19:32:01: 	Initialized applications page object
+INFO: 2026-10-25 19:32:01: 	Initialized dashboard page object
+INFO: 2026-10-25 19:32:01: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:32:01: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:32:02: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:32:02: 	Entering configured login credentials
+INFO: 2026-10-25 19:32:02: 	Step: submit the login form
+INFO: 2026-10-25 19:32:02: 	Submitting the login form
+INFO: 2026-10-25 19:32:04: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:32:04: 	Checking authenticated navigation
+INFO: 2026-10-25 19:32:04: 	Step: prepare application scenario 'noRiders' through rider details
+INFO: 2026-10-25 19:32:04: 	Preparing configured application scenario 'noRiders'
+INFO: 2026-10-25 19:32:04: 	Preparing application scenario 'noRiders' through rider details
+INFO: 2026-10-25 19:32:04: 	Loading application scenario 'noRiders' from test data
+INFO: 2026-10-25 19:32:04: 	Creating a new application draft
+INFO: 2026-10-25 19:32:04: 	Opening the Applications page
+INFO: 2026-10-25 19:32:06: 	Filling configured client details for applicant 'standard'
+INFO: 2026-10-25 19:32:07: 	Filling configured address and contact details
+INFO: 2026-10-25 19:32:09: 	Filling configured KYC and financial details
+INFO: 2026-10-25 19:32:10: 	Filling product and policy details for 'eliteLegacy'
+INFO: 2026-10-25 19:32:11: 	Selecting 0 configured rider(s)
+INFO: 2026-10-25 19:32:12: 	Step: save configured beneficiaries and proceed to document upload
+INFO: 2026-10-25 19:32:12: 	Saving configured application beneficiaries
+INFO: 2026-10-25 19:32:12: 	Loading application scenario 'noRiders' from test data
+INFO: 2026-10-25 19:32:12: 	Filling configured beneficiary 'adultPrimary'
+INFO: 2026-10-25 19:32:14: 	Step: upload the configured test document
+INFO: 2026-10-25 19:32:14: 	Uploading configured application test document
+INFO: 2026-10-25 19:32:14: 	Step: review, validate, and submit the application
+INFO: 2026-10-25 19:32:14: 	Reviewing, validating, and submitting application
+INFO: 2026-10-25 19:32:14: 	Continuing from document upload to application review
+INFO: 2026-10-25 19:32:15: 	Running review validation before submitting application
+INFO: 2026-10-25 19:32:17: 	Step: verify application submission confirmation
+INFO: 2026-10-25 19:32:17: 	Checking application submission confirmation
+INFO: 2026-10-25 19:32:17: 	Finishing scenario: Submit an application with the ID proof document (PASSED)

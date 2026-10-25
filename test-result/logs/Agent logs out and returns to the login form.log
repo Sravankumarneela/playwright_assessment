@@ -1,18 +1,20 @@
-INFO: 2026-10-25 17:27:16: 	Starting scenario: Agent logs out and returns to the login form
-INFO: 2026-10-25 17:27:16: 	Initialized login page object
-INFO: 2026-10-25 17:27:16: 	Initialized products page object
-INFO: 2026-10-25 17:27:16: 	Initialized support page object
-INFO: 2026-10-25 17:27:16: 	Initialized applications page object
-INFO: 2026-10-25 17:27:16: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:27:16: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:27:17: 	Step: enter configured login credentials
-INFO: 2026-10-25 17:27:17: 	Entering configured login credentials
-INFO: 2026-10-25 17:27:17: 	Step: submit the login form
-INFO: 2026-10-25 17:27:17: 	Submitting the login form
-INFO: 2026-10-25 17:27:19: 	Step: verify authenticated navigation
-INFO: 2026-10-25 17:27:19: 	Checking authenticated navigation
-INFO: 2026-10-25 17:27:19: 	Step: log out the agent
-INFO: 2026-10-25 17:27:19: 	Clicking the logout button
-INFO: 2026-10-25 17:27:20: 	Step: verify login form after logout
-INFO: 2026-10-25 17:27:20: 	Checking login form after logout
-INFO: 2026-10-25 17:27:20: 	Finishing scenario: Agent logs out and returns to the login form (PASSED)
+INFO: 2026-10-25 19:34:26: 	Starting scenario: Agent logs out and returns to the login form
+INFO: 2026-10-25 19:34:26: 	Initialized login page object
+INFO: 2026-10-25 19:34:26: 	Initialized products page object
+INFO: 2026-10-25 19:34:26: 	Initialized support page object
+INFO: 2026-10-25 19:34:26: 	Initialized applications page object
+INFO: 2026-10-25 19:34:26: 	Initialized dashboard page object
+INFO: 2026-10-25 19:34:26: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:34:26: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:34:26: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:34:26: 	Entering configured login credentials
+INFO: 2026-10-25 19:34:27: 	Step: submit the login form
+INFO: 2026-10-25 19:34:27: 	Submitting the login form
+INFO: 2026-10-25 19:34:28: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:34:28: 	Checking authenticated navigation
+INFO: 2026-10-25 19:34:29: 	Step: log out the agent
+INFO: 2026-10-25 19:34:29: 	Clicking the logout button
+INFO: 2026-10-25 19:34:29: 	Step: verify login form after logout
+INFO: 2026-10-25 19:34:29: 	Checking login form after logout
+INFO: 2026-10-25 19:34:29: 	Checking configured login form content
+INFO: 2026-10-25 19:34:30: 	Finishing scenario: Agent logs out and returns to the login form (PASSED)

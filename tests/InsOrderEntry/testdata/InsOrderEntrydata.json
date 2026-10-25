@@ -27,6 +27,30 @@
       "invalidCredentials": "Invalid credentials."
     }
   },
+  "dashboard": {
+    "testIds": {
+      "navigationLink": "nav-dashboard-link",
+      "newApplicationButton": "dashboard-new-application-button",
+      "viewAllApplicationsLink": "dashboard-view-all-applications-link",
+      "applicationRowPrefix": "application-row-",
+      "applicationOpenPrefix": "application-open-",
+      "applicationStatusPrefix": "application-status-"
+    },
+    "text": {
+      "heading": "Agent Dashboard",
+      "description": "Track drafts, submitted",
+      "applicationSummaryHeading": "Application Summary",
+      "recentApplicationsHeading": "Recent Applications",
+      "statusColumn": "Status",
+      "statusLabels": [
+        "Draft",
+        "Submitted",
+        "Under Review",
+        "Approved",
+        "Requires Info"
+      ]
+    }
+  },
   "forgotPassword": {
     "prompt": "Enter your agent email",
     "otpRequestEmail": "Test@mail.com",
@@ -238,7 +262,8 @@
       "invalidBeneficiaryEmail": "Beneficiary email format is invalid.",
       "underageClient": "Client must be at least 18 years old.",
       "overageClient": "Client must not be older than 65 years.",
-      "invalidPrimaryEmail": "Primary email format is invalid."
+      "invalidPrimaryEmail": "Primary email format is invalid.",
+      "missingIdProof": "ID proof document is required before submitting the application."
     },
     "applicants": {
       "standard": {

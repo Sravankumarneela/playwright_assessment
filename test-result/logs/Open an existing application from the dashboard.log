@@ -1,0 +1,21 @@
+INFO: 2026-10-25 19:33:58: 	Starting scenario: Open an existing application from the dashboard
+INFO: 2026-10-25 19:33:58: 	Initialized login page object
+INFO: 2026-10-25 19:33:58: 	Initialized products page object
+INFO: 2026-10-25 19:33:58: 	Initialized support page object
+INFO: 2026-10-25 19:33:58: 	Initialized applications page object
+INFO: 2026-10-25 19:33:58: 	Initialized dashboard page object
+INFO: 2026-10-25 19:33:58: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:33:58: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:33:58: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:33:58: 	Entering configured login credentials
+INFO: 2026-10-25 19:33:58: 	Step: submit the login form
+INFO: 2026-10-25 19:33:58: 	Submitting the login form
+INFO: 2026-10-25 19:34:00: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:34:00: 	Checking authenticated navigation
+INFO: 2026-10-25 19:34:00: 	Step: open the Dashboard tab
+INFO: 2026-10-25 19:34:00: 	Opening the Dashboard page
+INFO: 2026-10-25 19:34:01: 	Step: open an existing application from the dashboard
+INFO: 2026-10-25 19:34:01: 	Opening an existing application from the dashboard
+INFO: 2026-10-25 19:34:01: 	Step: verify existing application summary
+INFO: 2026-10-25 19:34:01: 	Checking the existing application summary
+INFO: 2026-10-25 19:34:01: 	Finishing scenario: Open an existing application from the dashboard (PASSED)

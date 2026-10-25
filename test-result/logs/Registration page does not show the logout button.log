@@ -1,12 +1,13 @@
-INFO: 2026-10-25 17:27:00: 	Starting scenario: Registration page does not show the logout button
-INFO: 2026-10-25 17:27:00: 	Initialized login page object
-INFO: 2026-10-25 17:27:00: 	Initialized products page object
-INFO: 2026-10-25 17:27:00: 	Initialized support page object
-INFO: 2026-10-25 17:27:00: 	Initialized applications page object
-INFO: 2026-10-25 17:27:00: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:27:00: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:27:01: 	Step: open the registration page
-INFO: 2026-10-25 17:27:01: 	Opening the registration page
-INFO: 2026-10-25 17:27:01: 	Step: verify logout button is hidden
-INFO: 2026-10-25 17:27:01: 	Checking that the logout button is hidden
-INFO: 2026-10-25 17:27:06: 	Finishing scenario: Registration page does not show the logout button (FAILED)
+INFO: 2026-10-25 19:34:10: 	Starting scenario: Registration page does not show the logout button
+INFO: 2026-10-25 19:34:10: 	Initialized login page object
+INFO: 2026-10-25 19:34:10: 	Initialized products page object
+INFO: 2026-10-25 19:34:10: 	Initialized support page object
+INFO: 2026-10-25 19:34:10: 	Initialized applications page object
+INFO: 2026-10-25 19:34:10: 	Initialized dashboard page object
+INFO: 2026-10-25 19:34:10: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:34:10: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:34:11: 	Step: open the registration page
+INFO: 2026-10-25 19:34:11: 	Opening the registration page
+INFO: 2026-10-25 19:34:11: 	Step: verify logout button is hidden
+INFO: 2026-10-25 19:34:11: 	Checking registration view and that the logout button is hidden
+INFO: 2026-10-25 19:34:16: 	Finishing scenario: Registration page does not show the logout button (FAILED)

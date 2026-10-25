@@ -1,18 +1,19 @@
-INFO: 2026-10-25 17:27:37: 	Starting scenario: Validate the support page
-INFO: 2026-10-25 17:27:37: 	Initialized login page object
-INFO: 2026-10-25 17:27:37: 	Initialized products page object
-INFO: 2026-10-25 17:27:37: 	Initialized support page object
-INFO: 2026-10-25 17:27:37: 	Initialized applications page object
-INFO: 2026-10-25 17:27:37: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:27:37: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:27:37: 	Step: enter configured login credentials
-INFO: 2026-10-25 17:27:37: 	Entering configured login credentials
-INFO: 2026-10-25 17:27:38: 	Step: submit the login form
-INFO: 2026-10-25 17:27:38: 	Submitting the login form
-INFO: 2026-10-25 17:27:39: 	Step: verify authenticated navigation
-INFO: 2026-10-25 17:27:39: 	Checking authenticated navigation
-INFO: 2026-10-25 17:27:39: 	Step: open the Support tab
-INFO: 2026-10-25 17:27:39: 	Opening support page from navigation
-INFO: 2026-10-25 17:27:40: 	Step: verify support form
-INFO: 2026-10-25 17:27:40: 	Checking support form content
-INFO: 2026-10-25 17:27:40: 	Finishing scenario: Validate the support page (PASSED)
+INFO: 2026-10-25 19:34:46: 	Starting scenario: Validate the support page
+INFO: 2026-10-25 19:34:46: 	Initialized login page object
+INFO: 2026-10-25 19:34:46: 	Initialized products page object
+INFO: 2026-10-25 19:34:46: 	Initialized support page object
+INFO: 2026-10-25 19:34:46: 	Initialized applications page object
+INFO: 2026-10-25 19:34:46: 	Initialized dashboard page object
+INFO: 2026-10-25 19:34:46: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:34:46: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:34:46: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:34:46: 	Entering configured login credentials
+INFO: 2026-10-25 19:34:46: 	Step: submit the login form
+INFO: 2026-10-25 19:34:46: 	Submitting the login form
+INFO: 2026-10-25 19:34:48: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:34:48: 	Checking authenticated navigation
+INFO: 2026-10-25 19:34:48: 	Step: open the Support tab
+INFO: 2026-10-25 19:34:48: 	Opening support page from navigation
+INFO: 2026-10-25 19:34:48: 	Step: verify support form
+INFO: 2026-10-25 19:34:48: 	Checking support form content
+INFO: 2026-10-25 19:34:49: 	Finishing scenario: Validate the support page (PASSED)

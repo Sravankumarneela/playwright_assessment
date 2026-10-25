@@ -71,7 +71,7 @@ Some scenarios carry the `@bug` tag to identify defect reproductions. Review tho
 | Products | Catalog cards and product detail views for configured products |
 | Support | Support form visibility and configured request submission |
 | Applications | Draft creation, configured applicant/product details, rider selection, beneficiaries, document upload, review validation, submission, and application summary |
-| Dashboard | Feature file is present but currently empty |
+| Dashboard | Dashboard components, status cards, recent applications, and opening an existing application |
 
 Feature files are in `tests/InsOrderEntry/features/`. Step definitions are in `tests/InsOrderEntry/steps/`, and browser interactions are implemented in page objects under `tests/InsOrderEntry/pages/`.
 

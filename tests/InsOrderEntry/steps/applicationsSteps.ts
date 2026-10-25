@@ -11,9 +11,19 @@ Then("the Applications page view is visible", async function () {
     await pageFixture.applicationsPage.expectApplicationsIndex();
 });
 
-When("the agent submits the configured application {string}", async function (scenarioKey: string) {
-    pageFixture.logger.info(`Step: submit configured application scenario '${scenarioKey}'`);
+When("the agent submits configured application {string} with the ID proof document", async function (scenarioKey: string) {
+    pageFixture.logger.info(`Step: submit configured application scenario '${scenarioKey}' with ID proof`);
     await pageFixture.applicationsPage.submitConfiguredApplication(scenarioKey);
+});
+
+When("the agent attempts to submit without the ID proof document", async function () {
+    pageFixture.logger.info("Step: attempt submission without ID proof");
+    await pageFixture.applicationsPage.attemptSubmissionWithoutIdProof();
+});
+
+Then("the missing ID proof error is displayed and submission is blocked", async function () {
+    pageFixture.logger.info("Step: verify missing ID proof error and blocked submission");
+    await pageFixture.applicationsPage.expectMissingIdProofSubmissionError();
 });
 
 When("the agent completes the client, contact, financial, product, and rider details for {string}", async function (scenarioKey: string) {

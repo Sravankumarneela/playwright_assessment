@@ -19,6 +19,9 @@ export class InsOrderEntrySupportPage {
         const form = this.page.getByTestId(data.support.testIds.form);
         await expect(form.locator("div").filter({ hasText: data.support.labels.subject })).toBeVisible();
         await expect(form.locator("div").filter({ hasText: data.support.labels.message })).toBeVisible();
+        await expect(this.page.getByTestId(data.support.testIds.subjectInput)).toBeVisible();
+        await expect(this.page.getByTestId(data.support.testIds.messageInput)).toBeVisible();
+        await expect(this.page.getByTestId(data.support.testIds.submitButton)).toBeVisible();
     }
 
     async submitConfiguredRequest(): Promise<void> {

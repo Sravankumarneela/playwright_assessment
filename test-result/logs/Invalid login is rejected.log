@@ -1,13 +1,14 @@
-INFO: 2026-10-25 17:26:55: 	Starting scenario: Invalid login is rejected
-INFO: 2026-10-25 17:26:55: 	Initialized login page object
-INFO: 2026-10-25 17:26:55: 	Initialized products page object
-INFO: 2026-10-25 17:26:55: 	Initialized support page object
-INFO: 2026-10-25 17:26:55: 	Initialized applications page object
-INFO: 2026-10-25 17:26:55: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:26:55: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:26:55: 	Step: submit invalid configured credentials
-INFO: 2026-10-25 17:26:55: 	Submitting invalid configured credentials
-INFO: 2026-10-25 17:26:56: 	Submitting the login form
-INFO: 2026-10-25 17:26:57: 	Step: verify invalid credentials message
-INFO: 2026-10-25 17:26:57: 	Checking invalid credentials message
-INFO: 2026-10-25 17:26:57: 	Finishing scenario: Invalid login is rejected (PASSED)
+INFO: 2026-10-25 19:34:05: 	Starting scenario: Invalid login is rejected
+INFO: 2026-10-25 19:34:05: 	Initialized login page object
+INFO: 2026-10-25 19:34:05: 	Initialized products page object
+INFO: 2026-10-25 19:34:05: 	Initialized support page object
+INFO: 2026-10-25 19:34:05: 	Initialized applications page object
+INFO: 2026-10-25 19:34:05: 	Initialized dashboard page object
+INFO: 2026-10-25 19:34:05: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:34:05: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:34:06: 	Step: submit invalid configured credentials
+INFO: 2026-10-25 19:34:06: 	Submitting invalid configured credentials
+INFO: 2026-10-25 19:34:06: 	Submitting the login form
+INFO: 2026-10-25 19:34:07: 	Step: verify invalid credentials message
+INFO: 2026-10-25 19:34:07: 	Checking invalid credentials message
+INFO: 2026-10-25 19:34:07: 	Finishing scenario: Invalid login is rejected (PASSED)

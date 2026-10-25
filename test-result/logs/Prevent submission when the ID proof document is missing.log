@@ -1,0 +1,35 @@
+INFO: 2026-10-25 19:32:17: 	Starting scenario: Prevent submission when the ID proof document is missing
+INFO: 2026-10-25 19:32:17: 	Initialized login page object
+INFO: 2026-10-25 19:32:17: 	Initialized products page object
+INFO: 2026-10-25 19:32:17: 	Initialized support page object
+INFO: 2026-10-25 19:32:17: 	Initialized applications page object
+INFO: 2026-10-25 19:32:17: 	Initialized dashboard page object
+INFO: 2026-10-25 19:32:17: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:32:17: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:32:18: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:32:18: 	Entering configured login credentials
+INFO: 2026-10-25 19:32:18: 	Step: submit the login form
+INFO: 2026-10-25 19:32:18: 	Submitting the login form
+INFO: 2026-10-25 19:32:19: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:32:19: 	Checking authenticated navigation
+INFO: 2026-10-25 19:32:20: 	Step: prepare application scenario 'happyPath' through rider details
+INFO: 2026-10-25 19:32:20: 	Preparing configured application scenario 'happyPath'
+INFO: 2026-10-25 19:32:20: 	Preparing application scenario 'happyPath' through rider details
+INFO: 2026-10-25 19:32:20: 	Loading application scenario 'happyPath' from test data
+INFO: 2026-10-25 19:32:20: 	Creating a new application draft
+INFO: 2026-10-25 19:32:20: 	Opening the Applications page
+INFO: 2026-10-25 19:32:22: 	Filling configured client details for applicant 'standard'
+INFO: 2026-10-25 19:32:23: 	Filling configured address and contact details
+INFO: 2026-10-25 19:32:24: 	Filling configured KYC and financial details
+INFO: 2026-10-25 19:32:25: 	Filling product and policy details for 'eliteLegacy'
+INFO: 2026-10-25 19:32:27: 	Selecting 0 configured rider(s)
+INFO: 2026-10-25 19:32:28: 	Step: save configured beneficiaries and proceed to document upload
+INFO: 2026-10-25 19:32:28: 	Saving configured application beneficiaries
+INFO: 2026-10-25 19:32:28: 	Loading application scenario 'happyPath' from test data
+INFO: 2026-10-25 19:32:28: 	Filling configured beneficiary 'adultPrimary'
+INFO: 2026-10-25 19:32:29: 	Step: attempt submission without ID proof
+INFO: 2026-10-25 19:32:29: 	Attempting to submit an application without its ID proof document
+INFO: 2026-10-25 19:32:29: 	Continuing from document upload to application review
+INFO: 2026-10-25 19:32:32: 	Step: verify missing ID proof error and blocked submission
+INFO: 2026-10-25 19:32:32: 	Checking missing ID proof error and blocked submission
+INFO: 2026-10-25 19:32:32: 	Finishing scenario: Prevent submission when the ID proof document is missing (FAILED)

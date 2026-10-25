@@ -1,0 +1,19 @@
+INFO: 2026-10-25 19:33:54: 	Starting scenario: Validate the dashboard page and its components
+INFO: 2026-10-25 19:33:54: 	Initialized login page object
+INFO: 2026-10-25 19:33:54: 	Initialized products page object
+INFO: 2026-10-25 19:33:54: 	Initialized support page object
+INFO: 2026-10-25 19:33:54: 	Initialized applications page object
+INFO: 2026-10-25 19:33:54: 	Initialized dashboard page object
+INFO: 2026-10-25 19:33:54: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:33:54: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:33:55: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:33:55: 	Entering configured login credentials
+INFO: 2026-10-25 19:33:55: 	Step: submit the login form
+INFO: 2026-10-25 19:33:55: 	Submitting the login form
+INFO: 2026-10-25 19:33:56: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:33:56: 	Checking authenticated navigation
+INFO: 2026-10-25 19:33:56: 	Step: open the Dashboard tab
+INFO: 2026-10-25 19:33:56: 	Opening the Dashboard page
+INFO: 2026-10-25 19:33:57: 	Step: verify dashboard page and components
+INFO: 2026-10-25 19:33:57: 	Checking dashboard content and recent applications
+INFO: 2026-10-25 19:33:57: 	Finishing scenario: Validate the dashboard page and its components (PASSED)

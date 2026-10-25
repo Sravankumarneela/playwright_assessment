@@ -1,33 +1,34 @@
-INFO: 2026-10-25 17:26:18: 	Starting scenario: Run Validation rejects an invalid primary email
-INFO: 2026-10-25 17:26:18: 	Initialized login page object
-INFO: 2026-10-25 17:26:18: 	Initialized products page object
-INFO: 2026-10-25 17:26:18: 	Initialized support page object
-INFO: 2026-10-25 17:26:18: 	Initialized applications page object
-INFO: 2026-10-25 17:26:18: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:26:18: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:26:19: 	Step: enter configured login credentials
-INFO: 2026-10-25 17:26:19: 	Entering configured login credentials
-INFO: 2026-10-25 17:26:19: 	Step: submit the login form
-INFO: 2026-10-25 17:26:19: 	Submitting the login form
-INFO: 2026-10-25 17:26:21: 	Step: verify authenticated navigation
-INFO: 2026-10-25 17:26:21: 	Checking authenticated navigation
-INFO: 2026-10-25 17:26:21: 	Step: prepare application scenario 'invalidPrimaryEmail' for review
-INFO: 2026-10-25 17:26:21: 	Preparing configured application scenario 'invalidPrimaryEmail' for review
-INFO: 2026-10-25 17:26:21: 	Preparing application scenario 'invalidPrimaryEmail' through rider details
-INFO: 2026-10-25 17:26:21: 	Loading application scenario 'invalidPrimaryEmail' from test data
-INFO: 2026-10-25 17:26:21: 	Creating a new application draft
-INFO: 2026-10-25 17:26:21: 	Opening the Applications page
-INFO: 2026-10-25 17:26:23: 	Filling configured client details for applicant 'standard'
-INFO: 2026-10-25 17:26:24: 	Filling configured address and contact details
-INFO: 2026-10-25 17:26:25: 	Filling configured KYC and financial details
-INFO: 2026-10-25 17:26:27: 	Filling product and policy details for 'secureBasic'
-INFO: 2026-10-25 17:26:28: 	Selecting 0 configured rider(s)
-INFO: 2026-10-25 17:26:29: 	Saving configured application beneficiaries
-INFO: 2026-10-25 17:26:29: 	Loading application scenario 'invalidPrimaryEmail' from test data
-INFO: 2026-10-25 17:26:29: 	Filling configured beneficiary 'adultPrimary'
-INFO: 2026-10-25 17:26:31: 	Continuing from document upload to application review
-INFO: 2026-10-25 17:26:32: 	Step: run application review validation
-INFO: 2026-10-25 17:26:32: 	Running application review validation
-INFO: 2026-10-25 17:26:33: 	Step: verify configured review validation error for 'invalidPrimaryEmail'
-INFO: 2026-10-25 17:26:33: 	Checking configured review validation error for 'invalidPrimaryEmail'
-INFO: 2026-10-25 17:26:33: 	Finishing scenario: Run Validation rejects an invalid primary email (PASSED)
+INFO: 2026-10-25 19:33:22: 	Starting scenario: Run Validation rejects an invalid primary email
+INFO: 2026-10-25 19:33:22: 	Initialized login page object
+INFO: 2026-10-25 19:33:22: 	Initialized products page object
+INFO: 2026-10-25 19:33:22: 	Initialized support page object
+INFO: 2026-10-25 19:33:22: 	Initialized applications page object
+INFO: 2026-10-25 19:33:22: 	Initialized dashboard page object
+INFO: 2026-10-25 19:33:22: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:33:22: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:33:22: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:33:22: 	Entering configured login credentials
+INFO: 2026-10-25 19:33:23: 	Step: submit the login form
+INFO: 2026-10-25 19:33:23: 	Submitting the login form
+INFO: 2026-10-25 19:33:24: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:33:24: 	Checking authenticated navigation
+INFO: 2026-10-25 19:33:24: 	Step: prepare application scenario 'invalidPrimaryEmail' for review
+INFO: 2026-10-25 19:33:24: 	Preparing configured application scenario 'invalidPrimaryEmail' for review
+INFO: 2026-10-25 19:33:24: 	Preparing application scenario 'invalidPrimaryEmail' through rider details
+INFO: 2026-10-25 19:33:24: 	Loading application scenario 'invalidPrimaryEmail' from test data
+INFO: 2026-10-25 19:33:24: 	Creating a new application draft
+INFO: 2026-10-25 19:33:24: 	Opening the Applications page
+INFO: 2026-10-25 19:33:26: 	Filling configured client details for applicant 'standard'
+INFO: 2026-10-25 19:33:27: 	Filling configured address and contact details
+INFO: 2026-10-25 19:33:29: 	Filling configured KYC and financial details
+INFO: 2026-10-25 19:33:30: 	Filling product and policy details for 'secureBasic'
+INFO: 2026-10-25 19:33:31: 	Selecting 0 configured rider(s)
+INFO: 2026-10-25 19:33:32: 	Saving configured application beneficiaries
+INFO: 2026-10-25 19:33:32: 	Loading application scenario 'invalidPrimaryEmail' from test data
+INFO: 2026-10-25 19:33:32: 	Filling configured beneficiary 'adultPrimary'
+INFO: 2026-10-25 19:33:34: 	Continuing from document upload to application review
+INFO: 2026-10-25 19:33:35: 	Step: run application review validation
+INFO: 2026-10-25 19:33:35: 	Running application review validation
+INFO: 2026-10-25 19:33:36: 	Step: verify configured review validation error for 'invalidPrimaryEmail'
+INFO: 2026-10-25 19:33:36: 	Checking configured review validation error for 'invalidPrimaryEmail'
+INFO: 2026-10-25 19:33:36: 	Finishing scenario: Run Validation rejects an invalid primary email (PASSED)

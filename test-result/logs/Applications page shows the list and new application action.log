@@ -1,18 +1,19 @@
-INFO: 2026-10-25 17:23:44: 	Starting scenario: Applications page shows the list and new application action
-INFO: 2026-10-25 17:23:45: 	Initialized login page object
-INFO: 2026-10-25 17:23:45: 	Initialized products page object
-INFO: 2026-10-25 17:23:45: 	Initialized support page object
-INFO: 2026-10-25 17:23:45: 	Initialized applications page object
-INFO: 2026-10-25 17:23:45: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:23:45: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:23:45: 	Step: enter configured login credentials
-INFO: 2026-10-25 17:23:45: 	Entering configured login credentials
-INFO: 2026-10-25 17:23:46: 	Step: submit the login form
-INFO: 2026-10-25 17:23:46: 	Submitting the login form
-INFO: 2026-10-25 17:23:48: 	Step: verify authenticated navigation
-INFO: 2026-10-25 17:23:48: 	Checking authenticated navigation
-INFO: 2026-10-25 17:23:48: 	Step: open the Applications tab
-INFO: 2026-10-25 17:23:48: 	Opening the Applications page
-INFO: 2026-10-25 17:23:48: 	Step: verify the Applications page view
-INFO: 2026-10-25 17:23:48: 	Checking Applications index content and table headers
-INFO: 2026-10-25 17:23:48: 	Finishing scenario: Applications page shows the list and new application action (PASSED)
+INFO: 2026-10-25 19:30:35: 	Starting scenario: Applications page shows the list and new application action
+INFO: 2026-10-25 19:30:35: 	Initialized login page object
+INFO: 2026-10-25 19:30:35: 	Initialized products page object
+INFO: 2026-10-25 19:30:35: 	Initialized support page object
+INFO: 2026-10-25 19:30:35: 	Initialized applications page object
+INFO: 2026-10-25 19:30:35: 	Initialized dashboard page object
+INFO: 2026-10-25 19:30:35: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:30:35: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:30:36: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:30:36: 	Entering configured login credentials
+INFO: 2026-10-25 19:30:36: 	Step: submit the login form
+INFO: 2026-10-25 19:30:36: 	Submitting the login form
+INFO: 2026-10-25 19:30:38: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:30:38: 	Checking authenticated navigation
+INFO: 2026-10-25 19:30:38: 	Step: open the Applications tab
+INFO: 2026-10-25 19:30:38: 	Opening the Applications page
+INFO: 2026-10-25 19:30:39: 	Step: verify the Applications page view
+INFO: 2026-10-25 19:30:39: 	Checking Applications index content and table headers
+INFO: 2026-10-25 19:30:39: 	Finishing scenario: Applications page shows the list and new application action (PASSED)

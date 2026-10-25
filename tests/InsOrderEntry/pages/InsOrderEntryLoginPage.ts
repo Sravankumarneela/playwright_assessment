@@ -47,6 +47,10 @@ export class InsOrderEntryLoginPage {
         this.logger.info("Checking authenticated navigation");
         await expect(this.page.getByTestId(data.loginPage.testIds.navigationBrand)).toBeVisible();
         await expect(this.page.getByTestId(data.loginPage.testIds.navigationLogoutButton)).toBeVisible();
+        await expect(this.page.getByTestId(data.dashboard.testIds.navigationLink)).toBeVisible();
+        await expect(this.page.getByTestId(data.products.testIds.navigationLink)).toBeVisible();
+        await expect(this.page.getByTestId(data.applications.testIds.navigationLink)).toBeVisible();
+        await expect(this.page.getByTestId(data.support.testIds.navigationLink)).toBeVisible();
     }
 
     async clickLogout(): Promise<void> {
@@ -56,10 +60,8 @@ export class InsOrderEntryLoginPage {
 
     async expectLoginFormAfterLogout(): Promise<void> {
         this.logger.info("Checking login form after logout");
-        const emailLabel = this.page.getByTestId(data.loginPage.testIds.loginForm)
-            .locator("div")
-            .filter({ hasText: data.loginPage.emailLabel });
-        await expect(emailLabel).toBeVisible();
+        await this.expectLoginForm();
+        await expect(this.page.getByTestId(data.loginPage.testIds.navigationLogoutButton)).toBeHidden();
     }
 
     async submitInvalidCredentials(): Promise<void> {
@@ -77,6 +79,9 @@ export class InsOrderEntryLoginPage {
     async expectInvalidCredentialsMessage(): Promise<void> {
         this.logger.info("Checking invalid credentials message");
         await expect(this.page.getByText(data.loginPage.messages.invalidCredentials)).toBeVisible();
+        await expect(this.page.getByRole("heading", { name: data.loginPage.heading })).toBeVisible();
+        await expect(this.page.getByTestId(data.loginPage.testIds.loginForm)).toBeVisible();
+        await expect(this.page.getByTestId(data.loginPage.testIds.navigationLogoutButton)).toBeHidden();
     }
 
     async openForgotPassword(): Promise<void> {
@@ -87,6 +92,8 @@ export class InsOrderEntryLoginPage {
     async expectForgotPasswordPrompt(): Promise<void> {
         this.logger.info("Checking forgot password prompt");
         await expect(this.page.getByText(data.forgotPassword.prompt)).toBeVisible();
+        await expect(this.page.getByTestId(data.forgotPassword.testIds.emailInput)).toBeVisible();
+        await expect(this.page.getByTestId(data.forgotPassword.testIds.submitButton)).toBeVisible();
     }
 
     async submitConfiguredPasswordResetRequest(): Promise<void> {
@@ -107,7 +114,8 @@ export class InsOrderEntryLoginPage {
     }
 
     async expectLogoutButtonNotVisible(): Promise<void> {
-        this.logger.info("Checking that the logout button is hidden");
+        this.logger.info("Checking registration view and that the logout button is hidden");
+        await expect(this.page.getByTestId(data.loginPage.testIds.loginForm)).toBeHidden();
         await expect(this.page.getByTestId(data.loginPage.testIds.navigationLogoutButton)).toBeHidden();
     }
 

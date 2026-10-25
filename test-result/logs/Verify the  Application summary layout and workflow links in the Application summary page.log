@@ -1,38 +1,42 @@
-INFO: 2026-10-25 17:26:33: 	Starting scenario: Verify the  Application summary layout and workflow links in the Application summary page
-INFO: 2026-10-25 17:26:33: 	Initialized login page object
-INFO: 2026-10-25 17:26:33: 	Initialized products page object
-INFO: 2026-10-25 17:26:33: 	Initialized support page object
-INFO: 2026-10-25 17:26:33: 	Initialized applications page object
-INFO: 2026-10-25 17:26:33: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:26:33: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:26:34: 	Step: enter configured login credentials
-INFO: 2026-10-25 17:26:34: 	Entering configured login credentials
-INFO: 2026-10-25 17:26:34: 	Step: submit the login form
-INFO: 2026-10-25 17:26:34: 	Submitting the login form
-INFO: 2026-10-25 17:26:35: 	Step: verify authenticated navigation
-INFO: 2026-10-25 17:26:35: 	Checking authenticated navigation
-INFO: 2026-10-25 17:26:35: 	Step: submit configured application scenario 'summary'
-INFO: 2026-10-25 17:26:35: 	Submitting configured application scenario 'summary'
-INFO: 2026-10-25 17:26:35: 	Preparing application scenario 'summary' through rider details
-INFO: 2026-10-25 17:26:35: 	Loading application scenario 'summary' from test data
-INFO: 2026-10-25 17:26:35: 	Creating a new application draft
-INFO: 2026-10-25 17:26:35: 	Opening the Applications page
-INFO: 2026-10-25 17:26:38: 	Filling configured client details for applicant 'standard'
-INFO: 2026-10-25 17:26:39: 	Filling configured address and contact details
-INFO: 2026-10-25 17:26:40: 	Filling configured KYC and financial details
-INFO: 2026-10-25 17:26:41: 	Filling product and policy details for 'secureBasic'
-INFO: 2026-10-25 17:26:43: 	Selecting 0 configured rider(s)
-INFO: 2026-10-25 17:26:44: 	Saving configured application beneficiaries
-INFO: 2026-10-25 17:26:44: 	Loading application scenario 'summary' from test data
-INFO: 2026-10-25 17:26:44: 	Continuing from document upload to application review
-INFO: 2026-10-25 17:26:45: 	Running review validation before submitting application
-INFO: 2026-10-25 17:26:47: 	Step: create draft and open summary for scenario 'summary'
-INFO: 2026-10-25 17:26:47: 	Creating application draft and opening summary for 'summary'
-INFO: 2026-10-25 17:26:47: 	Loading application scenario 'summary' from test data
-INFO: 2026-10-25 17:26:47: 	Creating a new application draft
-INFO: 2026-10-25 17:26:47: 	Opening the Applications page
-INFO: 2026-10-25 17:26:49: 	Filling configured client details for applicant 'standard'
-INFO: 2026-10-25 17:26:51: 	Step: verify application summary and workflow links for 'summary'
-INFO: 2026-10-25 17:26:51: 	Checking configured application summary for 'summary'
-INFO: 2026-10-25 17:26:51: 	Loading application scenario 'summary' from test data
-INFO: 2026-10-25 17:26:51: 	Finishing scenario: Verify the  Application summary layout and workflow links in the Application summary page (PASSED)
+INFO: 2026-10-25 19:33:36: 	Starting scenario: Verify the  Application summary layout and workflow links in the Application summary page
+INFO: 2026-10-25 19:33:36: 	Initialized login page object
+INFO: 2026-10-25 19:33:36: 	Initialized products page object
+INFO: 2026-10-25 19:33:36: 	Initialized support page object
+INFO: 2026-10-25 19:33:36: 	Initialized applications page object
+INFO: 2026-10-25 19:33:36: 	Initialized dashboard page object
+INFO: 2026-10-25 19:33:36: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:33:36: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:33:36: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:33:36: 	Entering configured login credentials
+INFO: 2026-10-25 19:33:37: 	Step: submit the login form
+INFO: 2026-10-25 19:33:37: 	Submitting the login form
+INFO: 2026-10-25 19:33:38: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:33:38: 	Checking authenticated navigation
+INFO: 2026-10-25 19:33:38: 	Step: submit configured application scenario 'summary' with ID proof
+INFO: 2026-10-25 19:33:38: 	Submitting configured application scenario 'summary'
+INFO: 2026-10-25 19:33:38: 	Preparing application scenario 'summary' through rider details
+INFO: 2026-10-25 19:33:38: 	Loading application scenario 'summary' from test data
+INFO: 2026-10-25 19:33:38: 	Creating a new application draft
+INFO: 2026-10-25 19:33:38: 	Opening the Applications page
+INFO: 2026-10-25 19:33:41: 	Filling configured client details for applicant 'standard'
+INFO: 2026-10-25 19:33:42: 	Filling configured address and contact details
+INFO: 2026-10-25 19:33:43: 	Filling configured KYC and financial details
+INFO: 2026-10-25 19:33:44: 	Filling product and policy details for 'secureBasic'
+INFO: 2026-10-25 19:33:45: 	Selecting 0 configured rider(s)
+INFO: 2026-10-25 19:33:46: 	Saving configured application beneficiaries
+INFO: 2026-10-25 19:33:46: 	Loading application scenario 'summary' from test data
+INFO: 2026-10-25 19:33:47: 	Uploading configured application test document
+INFO: 2026-10-25 19:33:47: 	Continuing from document upload to application review
+INFO: 2026-10-25 19:33:48: 	Running review validation before submitting application
+INFO: 2026-10-25 19:33:50: 	Step: verify application submission confirmation
+INFO: 2026-10-25 19:33:50: 	Checking application submission confirmation
+INFO: 2026-10-25 19:33:50: 	Step: create draft and open summary for scenario 'summary'
+INFO: 2026-10-25 19:33:50: 	Creating application draft and opening summary for 'summary'
+INFO: 2026-10-25 19:33:50: 	Loading application scenario 'summary' from test data
+INFO: 2026-10-25 19:33:50: 	Creating a new application draft
+INFO: 2026-10-25 19:33:50: 	Opening the Applications page
+INFO: 2026-10-25 19:33:52: 	Filling configured client details for applicant 'standard'
+INFO: 2026-10-25 19:33:54: 	Step: verify application summary and workflow links for 'summary'
+INFO: 2026-10-25 19:33:54: 	Checking configured application summary for 'summary'
+INFO: 2026-10-25 19:33:54: 	Loading application scenario 'summary' from test data
+INFO: 2026-10-25 19:33:54: 	Finishing scenario: Verify the  Application summary layout and workflow links in the Application summary page (PASSED)

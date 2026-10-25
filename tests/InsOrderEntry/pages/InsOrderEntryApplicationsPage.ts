@@ -38,8 +38,45 @@ export class InsOrderEntryApplicationsPage {
         this.logger.info(`Submitting configured application scenario '${scenarioKey}'`);
         await this.prepareToBeneficiaries(scenarioKey);
         await this.saveConfiguredBeneficiaries();
+        await this.uploadTestDocument();
         await this.continueFromDocumentsToReview();
         await this.validateAndSubmit();
+    }
+
+    async attemptSubmissionWithoutIdProof(): Promise<void> {
+        this.logger.info("Attempting to submit an application without its ID proof document");
+        await this.continueFromDocumentsToReview();
+        await this.page.getByTestId(data.applications.testIds.reviewValidate).click();
+
+        const missingDocumentError = this.page.getByText(data.applications.validationErrors.missingIdProof);
+        const validationPassed = this.page.getByTestId(data.applications.testIds.reviewValidationPassed);
+        await expect.poll(async () =>
+            await missingDocumentError.isVisible() || await validationPassed.isVisible()
+        ).toBe(true);
+
+        if (!await missingDocumentError.isVisible()) {
+            await this.page.getByTestId(data.applications.testIds.reviewSubmit).click();
+        }
+    }
+
+    async expectMissingIdProofSubmissionError(): Promise<void> {
+        this.logger.info("Checking missing ID proof error and blocked submission");
+        const missingDocumentErrorVisible = await this.page
+            .getByText(data.applications.validationErrors.missingIdProof)
+            .isVisible();
+        const submissionConfirmationVisible = await this.page
+            .getByTestId(data.applications.testIds.submissionConfirmation)
+            .isVisible();
+        const failures: string[] = [];
+
+        if (!missingDocumentErrorVisible) {
+            failures.push("The missing ID proof error was not displayed.");
+        }
+        if (submissionConfirmationVisible) {
+            failures.push("The application was submitted without the ID proof document.");
+        }
+
+        expect(failures, failures.join(" ")).toEqual([]);
     }
 
     async prepareConfiguredApplication(scenarioKey: string): Promise<void> {

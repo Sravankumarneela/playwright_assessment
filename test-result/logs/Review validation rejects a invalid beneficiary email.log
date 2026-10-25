@@ -1,30 +1,31 @@
-INFO: 2026-10-25 17:25:28: 	Starting scenario: Review validation rejects a invalid beneficiary email
-INFO: 2026-10-25 17:25:28: 	Initialized login page object
-INFO: 2026-10-25 17:25:28: 	Initialized products page object
-INFO: 2026-10-25 17:25:28: 	Initialized support page object
-INFO: 2026-10-25 17:25:28: 	Initialized applications page object
-INFO: 2026-10-25 17:25:28: 	Step: open the InsOrderEntry login page
-INFO: 2026-10-25 17:25:28: 	Opening the InsOrderEntry login page
-INFO: 2026-10-25 17:25:29: 	Step: enter configured login credentials
-INFO: 2026-10-25 17:25:29: 	Entering configured login credentials
-INFO: 2026-10-25 17:25:29: 	Step: submit the login form
-INFO: 2026-10-25 17:25:29: 	Submitting the login form
-INFO: 2026-10-25 17:25:31: 	Step: verify authenticated navigation
-INFO: 2026-10-25 17:25:31: 	Checking authenticated navigation
-INFO: 2026-10-25 17:25:31: 	Step: prepare application scenario 'invalidBeneficiaryEmail' for beneficiary entry
-INFO: 2026-10-25 17:25:31: 	Preparing application scenario 'invalidBeneficiaryEmail' through rider details
-INFO: 2026-10-25 17:25:31: 	Loading application scenario 'invalidBeneficiaryEmail' from test data
-INFO: 2026-10-25 17:25:31: 	Creating a new application draft
-INFO: 2026-10-25 17:25:31: 	Opening the Applications page
-INFO: 2026-10-25 17:25:33: 	Filling configured client details for applicant 'standard'
-INFO: 2026-10-25 17:25:34: 	Filling configured address and contact details
-INFO: 2026-10-25 17:25:36: 	Filling configured KYC and financial details
-INFO: 2026-10-25 17:25:37: 	Filling product and policy details for 'flexiPay'
-INFO: 2026-10-25 17:25:38: 	Selecting 0 configured rider(s)
-INFO: 2026-10-25 17:25:39: 	Step: attempt to save the configured beneficiary
-INFO: 2026-10-25 17:25:39: 	Attempting to save configured beneficiary with invalid email
-INFO: 2026-10-25 17:25:39: 	Loading application scenario 'invalidBeneficiaryEmail' from test data
-INFO: 2026-10-25 17:25:39: 	Filling configured beneficiary 'invalidEmail'
-INFO: 2026-10-25 17:25:40: 	Step: verify beneficiary email validation error on review
-INFO: 2026-10-25 17:25:40: 	Checking beneficiary email validation error on review page
-INFO: 2026-10-25 17:25:48: 	Finishing scenario: Review validation rejects a invalid beneficiary email (FAILED)
+INFO: 2026-10-25 19:32:33: 	Starting scenario: Review validation rejects a invalid beneficiary email
+INFO: 2026-10-25 19:32:33: 	Initialized login page object
+INFO: 2026-10-25 19:32:33: 	Initialized products page object
+INFO: 2026-10-25 19:32:33: 	Initialized support page object
+INFO: 2026-10-25 19:32:33: 	Initialized applications page object
+INFO: 2026-10-25 19:32:33: 	Initialized dashboard page object
+INFO: 2026-10-25 19:32:33: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 19:32:33: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 19:32:33: 	Step: enter configured login credentials
+INFO: 2026-10-25 19:32:33: 	Entering configured login credentials
+INFO: 2026-10-25 19:32:34: 	Step: submit the login form
+INFO: 2026-10-25 19:32:34: 	Submitting the login form
+INFO: 2026-10-25 19:32:35: 	Step: verify authenticated navigation
+INFO: 2026-10-25 19:32:35: 	Checking authenticated navigation
+INFO: 2026-10-25 19:32:35: 	Step: prepare application scenario 'invalidBeneficiaryEmail' for beneficiary entry
+INFO: 2026-10-25 19:32:35: 	Preparing application scenario 'invalidBeneficiaryEmail' through rider details
+INFO: 2026-10-25 19:32:35: 	Loading application scenario 'invalidBeneficiaryEmail' from test data
+INFO: 2026-10-25 19:32:35: 	Creating a new application draft
+INFO: 2026-10-25 19:32:35: 	Opening the Applications page
+INFO: 2026-10-25 19:32:37: 	Filling configured client details for applicant 'standard'
+INFO: 2026-10-25 19:32:39: 	Filling configured address and contact details
+INFO: 2026-10-25 19:32:40: 	Filling configured KYC and financial details
+INFO: 2026-10-25 19:32:41: 	Filling product and policy details for 'flexiPay'
+INFO: 2026-10-25 19:32:42: 	Selecting 0 configured rider(s)
+INFO: 2026-10-25 19:32:43: 	Step: attempt to save the configured beneficiary
+INFO: 2026-10-25 19:32:43: 	Attempting to save configured beneficiary with invalid email
+INFO: 2026-10-25 19:32:43: 	Loading application scenario 'invalidBeneficiaryEmail' from test data
+INFO: 2026-10-25 19:32:43: 	Filling configured beneficiary 'invalidEmail'
+INFO: 2026-10-25 19:32:45: 	Step: verify beneficiary email validation error on review
+INFO: 2026-10-25 19:32:45: 	Checking beneficiary email validation error on review page
+INFO: 2026-10-25 19:32:52: 	Finishing scenario: Review validation rejects a invalid beneficiary email (FAILED)

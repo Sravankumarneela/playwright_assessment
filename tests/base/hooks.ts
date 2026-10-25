@@ -11,6 +11,7 @@ import { InsOrderEntryLoginPage } from '../InsOrderEntry/pages/InsOrderEntryLogi
 import { InsOrderEntryProductsPage } from '../InsOrderEntry/pages/InsOrderEntryProductsPage';
 import { InsOrderEntrySupportPage } from '../InsOrderEntry/pages/InsOrderEntrySupportPage';
 import { InsOrderEntryApplicationsPage } from '../InsOrderEntry/pages/InsOrderEntryApplicationsPage';
+import { InsOrderEntryDashboardPage } from '../InsOrderEntry/pages/InsOrderEntryDashboardPage';
 
 setDefaultTimeout(30000);
 
@@ -43,6 +44,7 @@ Before({ timeout: 30000 }, async function ({ pickle }) {
     pageFixture.productsPage = new InsOrderEntryProductsPage(pageFixture.page, pageFixture.logger);
     pageFixture.supportPage = new InsOrderEntrySupportPage(pageFixture.page, pageFixture.logger);
     pageFixture.applicationsPage = new InsOrderEntryApplicationsPage(pageFixture.page, pageFixture.logger);
+    pageFixture.dashboardPage = new InsOrderEntryDashboardPage(pageFixture.page, pageFixture.logger);
 });
 
 After(async function ({ result, pickle }) {

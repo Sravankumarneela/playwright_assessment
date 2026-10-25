@@ -13,7 +13,7 @@ Feature: InsOrderEntry applications
 
     @Applications
 	Scenario Outline: Submit an application with configured beneficiary data for <scenarioKey>
-		When the agent submits the configured application "<scenarioKey>"
+		When the agent submits configured application "<scenarioKey>" with the ID proof document
 		Then the application submission confirmation is visible
 
 		@TC-011
@@ -35,6 +35,7 @@ Feature: InsOrderEntry applications
 	Scenario: Submit an application with multiple riders
 		When the agent completes the client, contact, financial, product, and rider details for "multipleRiders"
 		And the agent saves the configured beneficiaries and proceeds to document upload
+		And the agent uploads the configured test document
 		And the agent reviews, validates, and submits the application
 		Then the application submission confirmation is visible
 
@@ -42,6 +43,7 @@ Feature: InsOrderEntry applications
 	Scenario: Submit an application without selecting any riders
 		When the agent completes the client, contact, financial, and product details for "noRiders" and leaves every rider unselected
 		And the agent saves the configured beneficiaries and proceeds to document upload
+		And the agent uploads the configured test document
 		And the agent reviews, validates, and submits the application
 		Then the application submission confirmation is visible
 
@@ -52,6 +54,13 @@ Feature: InsOrderEntry applications
 		And the agent uploads the configured test document
 		And the agent reviews, validates, and submits the application
 		Then the application submission confirmation is visible
+
+	@TC-024 @Applications @bug
+	Scenario: Prevent submission when the ID proof document is missing
+		When the agent completes the client, contact, financial, product, and rider details for "happyPath"
+		And the agent saves the configured beneficiaries and proceeds to document upload
+		And the agent attempts to submit without the ID proof document
+		Then the missing ID proof error is displayed and submission is blocked
 
     @TC-012 @Applications @bug
 	Scenario: Review validation rejects a invalid beneficiary email
@@ -79,6 +88,7 @@ Feature: InsOrderEntry applications
 
     @TC-015 @Applications
 	Scenario: Verify the  Application summary layout and workflow links in the Application summary page
-        When the agent submits the configured application "summary"
+		When the agent submits configured application "summary" with the ID proof document
+		Then the application submission confirmation is visible
 		When the agent creates a draft from scenario "summary" and opens its summary
 		Then the configured application summary and workflow links are visible for "summary"

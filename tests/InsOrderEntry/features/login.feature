@@ -6,6 +6,7 @@ Feature: InsOrderEntry login
 		When the agent enters the configured credentials
 		Then the configured login form content is visible
 		When the agent submits the login form
+		Then the authenticated navigation is visible
 		And the agent clicks the navigation brand
 		Then the authenticated navigation is visible
 
