@@ -15,12 +15,12 @@ module.exports = {
             snippetInterface: "async-await"
         },
         paths: [
-            "tests/FinsRetail/features/*.feature"
+            "tests/InsOrderEntry/features/*.feature"
         ],
         dryRun: false,
         require: [
             "tests/base/*.ts",
-            "tests/FinsRetail/steps/*.ts"
+            "tests/InsOrderEntry/steps/*.ts"
         ],
         requireModule: [
             "ts-node/register"

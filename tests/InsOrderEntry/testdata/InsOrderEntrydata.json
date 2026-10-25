@@ -1,0 +1,541 @@
+{
+  "applicationUrl": "http://127.0.0.1:8081",
+  "loginPath": "/login",
+  "credentials": {
+    "email": "agent.valid@insurance.test",
+    "password": "Password@123"
+  },
+  "invalidCredentials": {
+    "email": "testinvalid@test.com",
+    "password": "Test123456"
+  },
+  "loginPage": {
+    "heading": "Insurance Order Entry Demo",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "testIds": {
+      "emailInput": "login-email-input",
+      "passwordInput": "login-password-input",
+      "submitButton": "login-submit-button",
+      "forgotPasswordLink": "forgot-password-link",
+      "agentRegistrationLink": "agent-registration-link",
+      "navigationBrand": "nav-brand",
+      "navigationLogoutButton": "nav-logout-button",
+      "loginForm": "login-form"
+    },
+    "messages": {
+      "invalidCredentials": "Invalid credentials."
+    }
+  },
+  "forgotPassword": {
+    "prompt": "Enter your agent email",
+    "otpRequestEmail": "Test@mail.com",
+    "otpPrompt": "Enter the 6-digit password",
+    "testIds": {
+      "emailInput": "forgot-password-email-input",
+      "submitButton": "forgot-password-submit-button",
+      "statusAlert": "status-alert"
+    },
+    "messages": {
+      "otpConfirmation": "OTP sent to email successfully"
+    }
+  },
+  "products": {
+    "testIds": {
+      "navigationLink": "nav-products-link",
+      "detailsButtonPrefix": "product-details-",
+      "detailPage": "product-detail-page",
+      "productName": "product-name",
+      "features": "product-features",
+      "backLink": "products-back-link"
+    },
+    "catalogHeading": "Whole Life Product Catalog",
+    "type": "WHOLE_LIFE",
+    "featuresHeading": "Features",
+    "catalog": {
+      "eliteLegacy": {
+        "code": "WL_ELITE_LEGACY",
+        "id": "3",
+        "catalogText": "WL_ELITE_LEGACY Elite Legacy",
+        "name": "Elite Legacy Whole Life",
+        "ageRange": "30 - 65",
+        "catalogSummary": "Age30 - 65 Sum Assured500,000",
+        "minSumAssured": "500,000.00",
+        "maxSumAssured": "5,000,000.00"
+      },
+      "flexiPay": {
+        "code": "WL_FLEXI_PAY",
+        "id": "4",
+        "catalogText": "WL_FLEXI_PAY FlexiPay Whole",
+        "name": "FlexiPay Whole Life",
+        "ageRange": "19 - 62",
+        "catalogSummary": "Age19 - 62 Sum Assured100,000",
+        "minSumAssured": "100,000.00",
+        "maxSumAssured": "1,200,000.00"
+      },
+      "secureBasic": {
+        "code": "WL_SECURE_BASIC",
+        "id": "1",
+        "catalogText": "WL_SECURE_BASIC SecureLife",
+        "name": "SecureLife Whole Life",
+        "ageRange": "18 - 65",
+        "catalogSummary": "Age18 - 65 Sum Assured100,000",
+        "minSumAssured": "100,000.00",
+        "maxSumAssured": "1,000,000.00"
+      },
+      "wealthBuilder": {
+        "code": "WL_WEALTH_BUILDER",
+        "id": "2",
+        "catalogText": "WL_WEALTH_BUILDER WealthBuilder Whole Life Growth and protection product with",
+        "name": "WealthBuilder Whole Life",
+        "ageRange": "21 - 60",
+        "catalogSummary": "Age21 - 60 Sum Assured150,000",
+        "minSumAssured": "150,000.00",
+        "maxSumAssured": "1,500,000.00"
+      }
+    }
+  },
+  "support": {
+    "testIds": {
+      "navigationLink": "nav-support-link",
+      "form": "support-form",
+      "subjectInput": "support-subject-input",
+      "messageInput": "support-message-input",
+      "submitButton": "support-submit-button",
+      "confirmationDashboardLink": "support-confirmation-dashboard-link"
+    },
+    "formHeading": "Raise Support Request",
+    "labels": {
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "request": {
+      "subject": "Test123",
+      "message": "This the test support request"
+    },
+    "confirmation": {
+      "heading": "Support Request Submitted",
+      "message": "Your support request has been"
+    }
+  },
+  "applications": {
+    "testIds": {
+      "navigationLink": "nav-applications-link",
+      "newButton": "application-new-button",
+      "createDraftButton": "application-create-draft-button",
+      "indexPage": "applications-index-page",
+      "table": "applications-table",
+      "workflowSummaryButton": "workflow-summary-button",
+      "clientPage": "client-information-page",
+      "clientFirstName": "client-first-name-input",
+      "clientMiddleName": "client-middle-name-input",
+      "clientLastName": "client-last-name-input",
+      "clientDateOfBirth": "client-dob-input",
+      "clientGender": "client-gender-select",
+      "clientMaritalStatus": "client-marital-status-select",
+      "clientNationality": "client-nationality-input",
+      "clientOccupation": "client-occupation-input",
+      "clientEmployerName": "client-employer-name-input",
+      "clientEmployerAddress": "client-employer-address-input",
+      "clientContinue": "client-save-continue-button",
+      "addressLine1": "residential-address-line-1-input",
+      "addressLine2": "residential-address-line-2-input",
+      "addressCity": "residential-city-input",
+      "addressState": "residential-state-province-select",
+      "addressPostalCode": "residential-postal-code-input",
+      "sameAsResidential": "address-same-as-residential-checkbox",
+      "mailingLine1": "mailing-address-line-1-input",
+      "mailingLine2": "mailing-address-line-2-input",
+      "mailingCity": "mailing-city-input",
+      "mailingState": "mailing-state-province-select",
+      "mailingPostalCode": "mailing-postal-code-input",
+      "contactEmail": "contact-primary-email-input",
+      "contactPhone": "contact-mobile-number-input",
+      "contactAlternatePhone": "contact-alternate-phone-input",
+      "contactMode": "contact-preferred-mode-select",
+      "addressContactContinue": "address-contact-save-continue-button",
+      "kycIdType": "kyc-id-type-select",
+      "kycIdNumber": "kyc-id-number-input",
+      "kycIssueDate": "kyc-issue-date-input",
+      "kycExpiryDate": "kyc-expiry-date-input",
+      "annualIncome": "financial-annual-income-input",
+      "netWorth": "financial-net-worth-input",
+      "sourceOfFunds": "financial-source-of-funds-select",
+      "riskProfile": "financial-risk-profile-select",
+      "pep": "compliance-pep-select",
+      "pepDetails": "compliance-pep-details-input",
+      "complianceDeclaration": "compliance-declaration-checkbox",
+      "kycContinue": "kyc-financial-save-continue-button",
+      "productSelect": "product-select",
+      "sumAssured": "product-sum-assured-input",
+      "premiumFrequency": "product-premium-frequency-select",
+      "paymentTerm": "product-payment-term-select",
+      "coverageTerm": "product-coverage-term-select",
+      "productContinue": "product-save-continue-button",
+      "riderSelectedPrefix": "rider-selected-",
+      "riderCoveragePrefix": "rider-coverage-amount-",
+      "ridersContinue": "rider-save-continue-button",
+      "beneficiaryLevel": "beneficiary-level-select",
+      "beneficiaryType": "beneficiary-type-select",
+      "beneficiaryRelationship": "beneficiary-relationship-select",
+      "beneficiaryAllocation": "beneficiary-allocation-input",
+      "beneficiaryDesignation": "beneficiary-designation-select",
+      "beneficiaryPhone": "beneficiary-phone-input",
+      "beneficiaryEmail": "beneficiary-email-input",
+      "beneficiaryCountry": "beneficiary-country-input",
+      "beneficiaryFirstName": "beneficiary-first-name-input",
+      "beneficiaryMiddleName": "beneficiary-middle-name-input",
+      "beneficiaryLastName": "beneficiary-last-name-input",
+      "beneficiaryDateOfBirth": "beneficiary-dob-input",
+      "beneficiaryGender": "beneficiary-gender-select",
+      "beneficiaryAddressLine1": "beneficiary-address-line-1-input",
+      "beneficiaryCity": "beneficiary-city-input",
+      "beneficiaryState": "beneficiary-state-input",
+      "beneficiaryPostalCode": "beneficiary-postal-code-input",
+      "guardianName": "beneficiary-guardian-name-input",
+      "guardianRelationship": "beneficiary-guardian-relationship-input",
+      "guardianContact": "beneficiary-guardian-contact-input",
+      "guardianAddress": "beneficiary-guardian-address-input",
+      "guardianAcknowledgement": "beneficiary-legal-acknowledgement-checkbox",
+      "beneficiaryForm": "beneficiary-form",
+      "beneficiaryEmptyState": "beneficiary-empty-state",
+      "beneficiarySave": "beneficiary-save-button",
+      "beneficiaryContinue": "beneficiary-continue-button",
+      "documentsContinue": "documents-continue-review-button",
+      "reviewValidate": "review-validate-button",
+      "reviewSubmit": "review-submit-application-button",
+      "reviewValidationPassed": "review-validation-passed",
+      "reviewValidationErrors": "review-validation-errors",
+      "submissionConfirmation": "submission-confirmation-page",
+      "submissionReference": "confirmation-reference-number"
+    },
+    "text": {
+      "indexHeading": "Applications",
+      "indexDescription": "Open an existing application or start a new life insurance order entry case.",
+      "tableHeaders": ["ID", "Client", "Product", "Status", "Total Modal Premium"],
+      "applicationSummaryHeading": "Application Summary",
+      "applicationSummaryDescription": "Review the current application state and continue the order entry workflow.",
+      "snapshotHeading": "Snapshot",
+      "continueWorkflowHeading": "Continue Workflow",
+      "workflowLinks": [
+        "Client Information",
+        "Address & Contact",
+        "KYC & Financial",
+        "Product & Policy Configuration",
+        "Riders",
+        "Beneficiaries",
+        "Documents",
+        "Review Application"
+      ],
+      "reviewHeading": "Review Application",
+      "submittedHeading": "Application Submitted",
+      "submittedMessage": "The application has been submitted for review."
+    },
+    "documents": {
+      "testFile": "Test_file.pdf"
+    },
+    "validationErrors": {
+      "invalidBeneficiaryEmail": "Beneficiary email format is invalid.",
+      "underageClient": "Client must be at least 18 years old.",
+      "overageClient": "Client must not be older than 65 years.",
+      "invalidPrimaryEmail": "Primary email format is invalid."
+    },
+    "applicants": {
+      "standard": {
+        "firstName": "Test",
+        "middleName": "Automation",
+        "lastName": "Applicant",
+        "fullName": "Test Automation Applicant",
+        "summaryName": "Test Applicant",
+        "dateOfBirth": "1990-06-04",
+        "gender": "MALE",
+        "maritalStatus": "SINGLE",
+        "nationality": "United States",
+        "occupation": "Private employee",
+        "employerName": "Test company",
+        "employerAddress": "Spring field"
+      },
+      "underage": {
+        "firstName": "Test",
+        "middleName": "Automation",
+        "lastName": "Underage",
+        "fullName": "Test Automation Underage",
+        "summaryName": "Test Underage",
+        "dateOfBirth": "2010-05-20",
+        "gender": "MALE",
+        "maritalStatus": "SINGLE",
+        "nationality": "United States",
+        "occupation": "Student",
+        "employerName": "Test company",
+        "employerAddress": "Spring field"
+      },
+      "overage": {
+        "firstName": "Test",
+        "middleName": "Automation",
+        "lastName": "Overage",
+        "fullName": "Test Automation Overage",
+        "summaryName": "Test Overage",
+        "dateOfBirth": "1950-05-20",
+        "gender": "MALE",
+        "maritalStatus": "SINGLE",
+        "nationality": "United States",
+        "occupation": "Retired",
+        "employerName": "Retired",
+        "employerAddress": "Spring field"
+      }
+    },
+    "address": {
+      "line1": "123 First Street",
+      "line2": "Street 10",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "12345",
+      "sameAsResidential": true,
+      "mailingLine1": "123 First Street",
+      "mailingLine2": "Street 10",
+      "mailingCity": "New York",
+      "mailingState": "NY",
+      "mailingPostalCode": "12345",
+      "email": "application.contact@example.com",
+      "phone": "9875236410",
+      "alternatePhone": "9875236411",
+      "preferredMode": "PHONE"
+    },
+    "financial": {
+      "idType": "SSN",
+      "idNumber": "963258741",
+      "issueDate": "2026-01-01",
+      "expiryDate": "2027-12-31",
+      "annualIncome": "400000",
+      "netWorth": "10000000",
+      "sourceOfFunds": "SALARY",
+      "riskProfile": "MODERATE",
+      "pep": "0",
+      "pepDetails": "",
+      "declarationCompleted": true
+    },
+    "beneficiaries": {
+      "adultPrimary": {
+        "level": "PRIMARY",
+        "type": "INDIVIDUAL",
+        "relationship": "SPOUSE",
+        "allocation": "100",
+        "designation": "0",
+        "phone": "9876543210",
+        "email": "primary.beneficiary@example.com",
+        "country": "US",
+        "firstName": "Taylor",
+        "middleName": "QA",
+        "lastName": "Beneficiary",
+        "dateOfBirth": "1992-12-30",
+        "gender": "FEMALE",
+        "addressLine1": "123 Beneficiary Street",
+        "city": "New York",
+        "state": "New York",
+        "postalCode": "12345",
+        "guardian": null
+      },
+      "invalidEmail": {
+        "level": "PRIMARY",
+        "type": "INDIVIDUAL",
+        "relationship": "SPOUSE",
+        "allocation": "100",
+        "designation": "0",
+        "phone": "9876543210",
+        "email": "test@example",
+        "country": "US",
+        "firstName": "Invalid",
+        "middleName": "",
+        "lastName": "Email",
+        "dateOfBirth": "1992-12-30",
+        "gender": "FEMALE",
+        "addressLine1": "123 Beneficiary Street",
+        "city": "New York",
+        "state": "New York",
+        "postalCode": "12345",
+        "guardian": null
+      },
+      "multiplePrimary": {
+        "level": "PRIMARY",
+        "type": "INDIVIDUAL",
+        "relationship": "SPOUSE",
+        "allocation": "100",
+        "designation": "0",
+        "phone": "9876543210",
+        "email": "multiple.primary@example.com",
+        "country": "US",
+        "firstName": "Jordan",
+        "middleName": "QA",
+        "lastName": "Primary",
+        "dateOfBirth": "1990-07-12",
+        "gender": "FEMALE",
+        "addressLine1": "234 Beneficiary Street",
+        "city": "New York",
+        "state": "New York",
+        "postalCode": "12345",
+        "guardian": null
+      },
+      "multipleSecondary": {
+        "level": "SECONDARY",
+        "type": "INDIVIDUAL",
+        "relationship": "CHILD",
+        "allocation": "100",
+        "designation": "0",
+        "phone": "9876543211",
+        "email": "multiple.secondary@example.com",
+        "country": "US",
+        "firstName": "Casey",
+        "middleName": "QA",
+        "lastName": "Secondary",
+        "dateOfBirth": "2010-08-14",
+        "gender": "MALE",
+        "addressLine1": "234 Beneficiary Street",
+        "city": "New York",
+        "state": "New York",
+        "postalCode": "12345",
+        "guardian": {
+          "name": "Jordan Primary",
+          "relationship": "Parent",
+          "contact": "9876543210",
+          "address": "234 Beneficiary Street, New York, NY 12345",
+          "acknowledgement": true
+        }
+      },
+      "minorSecondary": {
+        "level": "PRIMARY",
+        "type": "INDIVIDUAL",
+        "relationship": "CHILD",
+        "allocation": "100",
+        "designation": "0",
+        "phone": "9876543212",
+        "email": "minor.beneficiary@example.com",
+        "country": "US",
+        "firstName": "Minor",
+        "middleName": "QA",
+        "lastName": "Beneficiary",
+        "dateOfBirth": "2012-12-30",
+        "gender": "MALE",
+        "addressLine1": "345 Beneficiary Street",
+        "city": "New York",
+        "state": "New York",
+        "postalCode": "12345",
+        "guardian": {
+          "name": "Test Guardian",
+          "relationship": "Parent",
+          "contact": "9876542103",
+          "address": "123, New York, 12345",
+          "acknowledgement": true
+        }
+      }
+    },
+    "scenarios": {
+      "multipleRiders": {
+        "applicantKey": "standard",
+        "productKey": "secureBasic",
+        "sumAssured": "200000",
+        "premiumFrequency": "ANNUAL",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [
+          { "index": "1", "coverageAmount": "2000" },
+          { "index": "2", "coverageAmount": "3000" }
+        ],
+        "beneficiaries": ["adultPrimary"]
+      },
+      "noRiders": {
+        "applicantKey": "standard",
+        "productKey": "eliteLegacy",
+        "sumAssured": "700000",
+        "premiumFrequency": "QUARTERLY",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [],
+        "beneficiaries": ["adultPrimary"]
+      },
+      "happyPath": {
+        "applicantKey": "standard",
+        "productKey": "eliteLegacy",
+        "sumAssured": "700000",
+        "premiumFrequency": "QUARTERLY",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [],
+        "beneficiaries": ["adultPrimary"]
+      },
+      "invalidBeneficiaryEmail": {
+        "applicantKey": "standard",
+        "productKey": "flexiPay",
+        "sumAssured": "300000",
+        "premiumFrequency": "MONTHLY",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [],
+        "beneficiaries": ["invalidEmail"]
+      },
+      "multipleBeneficiaries": {
+        "applicantKey": "standard",
+        "productKey": "secureBasic",
+        "sumAssured": "200000",
+        "premiumFrequency": "ANNUAL",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [
+          { "index": "1", "coverageAmount": "2000" },
+          { "index": "2", "coverageAmount": "3000" }
+        ],
+        "beneficiaries": ["multiplePrimary", "multipleSecondary"]
+      },
+      "underageClient": {
+        "applicantKey": "underage",
+        "productKey": "secureBasic",
+        "sumAssured": "200000",
+        "premiumFrequency": "ANNUAL",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [],
+        "beneficiaries": ["adultPrimary"]
+      },
+      "overageClient": {
+        "applicantKey": "overage",
+        "productKey": "secureBasic",
+        "sumAssured": "200000",
+        "premiumFrequency": "ANNUAL",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [],
+        "beneficiaries": ["adultPrimary"]
+      },
+      "invalidPrimaryEmail": {
+        "applicantKey": "standard",
+        "productKey": "secureBasic",
+        "sumAssured": "200000",
+        "premiumFrequency": "ANNUAL",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [],
+        "contactEmail": "test@abc",
+        "beneficiaries": ["adultPrimary"]
+      },
+      "minorBeneficiary": {
+        "applicantKey": "standard",
+        "productKey": "wealthBuilder",
+        "sumAssured": "300000",
+        "premiumFrequency": "QUARTERLY",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [],
+        "beneficiaries": ["minorSecondary"]
+      },
+      "summary": {
+        "applicantKey": "standard",
+        "productKey": "secureBasic",
+        "sumAssured": "200000",
+        "premiumFrequency": "ANNUAL",
+        "paymentTerm": "10",
+        "coverageTerm": "WHOLE_LIFE",
+        "riders": [],
+        "beneficiaries": []
+      }
+    }
+  }
+}

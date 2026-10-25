@@ -1,24 +1,13 @@
 import { Page } from "playwright";
-import { Logger } from "winston";
-import { LoginPage } from "../FinsRetail/pages/LoginPage";
-import { MutualFundPage } from "../FinsRetail/pages/MutualFundPage";
-import { PortfolioPage } from "../FinsRetail/pages/PortfolioPage";
-import { InsurancePage } from "../FinsRetail/pages/InsurancePage";
-import { PoliciesPage } from "../FinsRetail/pages/PoliciesPage";
-import { TransactionsPage } from "../FinsRetail/pages/TransactionsPage";
-import { SupportPage } from "../FinsRetail/pages/SupportPage";
+import { InsOrderEntryLoginPage } from "../InsOrderEntry/pages/InsOrderEntryLoginPage";
+import { InsOrderEntryProductsPage } from "../InsOrderEntry/pages/InsOrderEntryProductsPage";
+import { InsOrderEntrySupportPage } from "../InsOrderEntry/pages/InsOrderEntrySupportPage";
+import { InsOrderEntryApplicationsPage } from "../InsOrderEntry/pages/InsOrderEntryApplicationsPage";
 
 export const pageFixture = {
-    // @ts-ignore
-    page: undefined as Page,
-    // @ts-ignore
-    logger: undefined as Logger,
-
-    loginPage: undefined as unknown as LoginPage,
-    mutualFundPage: undefined as unknown as MutualFundPage,
-    portfolioPage: undefined as unknown as PortfolioPage,
-    insurancePage: undefined as unknown as InsurancePage,
-    policiesPage: undefined as unknown as PoliciesPage,
-    transactionsPage: undefined as unknown as TransactionsPage,
-    supportPage: undefined as unknown as SupportPage
+    page: undefined as unknown as Page,
+    loginPage: undefined as unknown as InsOrderEntryLoginPage,
+    productsPage: undefined as unknown as InsOrderEntryProductsPage,
+    supportPage: undefined as unknown as InsOrderEntrySupportPage,
+    applicationsPage: undefined as unknown as InsOrderEntryApplicationsPage
 }

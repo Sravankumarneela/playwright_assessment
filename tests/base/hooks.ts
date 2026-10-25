@@ -5,15 +5,10 @@ import { Browser, Page, BrowserContext } from 'playwright';
 import { pageFixture } from './pagefixture';
 import { invokeBrowser } from '../helpers/browsers/browserManager';
 import { getEnv } from '../helpers/Environment/env';
-import { createLogger } from 'winston';
-import { options } from '../helpers/util/logger';
-import { LoginPage } from '../FinsRetail/pages/LoginPage';
-import { MutualFundPage } from '../FinsRetail/pages/MutualFundPage';
-import { PortfolioPage } from '../FinsRetail/pages/PortfolioPage';
-import { InsurancePage } from '../FinsRetail/pages/InsurancePage';
-import { PoliciesPage } from '../FinsRetail/pages/PoliciesPage';
-import { TransactionsPage } from '../FinsRetail/pages/TransactionsPage';
-import { SupportPage } from '../FinsRetail/pages/SupportPage';
+import { InsOrderEntryLoginPage } from '../InsOrderEntry/pages/InsOrderEntryLoginPage';
+import { InsOrderEntryProductsPage } from '../InsOrderEntry/pages/InsOrderEntryProductsPage';
+import { InsOrderEntrySupportPage } from '../InsOrderEntry/pages/InsOrderEntrySupportPage';
+import { InsOrderEntryApplicationsPage } from '../InsOrderEntry/pages/InsOrderEntryApplicationsPage';
 
 setDefaultTimeout(30000);
 
@@ -29,35 +24,19 @@ BeforeAll({ timeout: 30000 }, async function () {
     browser = await invokeBrowser();
 });
 
-Before({ timeout: 30000 }, async function ({pickle}) {
-    const scenarioName = pickle.name+pickle.id;
+Before({ timeout: 30000 }, async function () {
     await mkdir(temporaryVideoDirectory, { recursive: true });
     context = await browser.newContext({
-        viewport: null,
+        viewport: { width: 1280, height: 900 },
         recordVideo: {
             dir: temporaryVideoDirectory
         }
     });
-    const page = await context.newPage();
-    pageFixture.page = page;
-    pageFixture.logger = createLogger(options(scenarioName)); // Assuming createLogger is defined elsewhere
-    pageFixture.loginPage = new LoginPage(pageFixture.page, pageFixture.logger);
-    pageFixture.mutualFundPage = new MutualFundPage(pageFixture.page, pageFixture.logger);
-    pageFixture.portfolioPage = new PortfolioPage(pageFixture.page, pageFixture.logger);
-    pageFixture.insurancePage = new InsurancePage(pageFixture.page, pageFixture.logger);
-    pageFixture.policiesPage = new PoliciesPage(pageFixture.page, pageFixture.logger);
-    pageFixture.transactionsPage = new TransactionsPage(pageFixture.page, pageFixture.logger);
-    pageFixture.supportPage = new SupportPage(pageFixture.page, pageFixture.logger);
-
-    const baseUrl = process.env.BASEURL;
-    if (!baseUrl) {
-        throw new Error('BASEURL is not configured');
-    }
-
-    await page.goto(baseUrl, {
-        waitUntil: 'domcontentloaded',
-        timeout: 30000,
-    });
+    pageFixture.page = await context.newPage();
+    pageFixture.loginPage = new InsOrderEntryLoginPage(pageFixture.page);
+    pageFixture.productsPage = new InsOrderEntryProductsPage(pageFixture.page);
+    pageFixture.supportPage = new InsOrderEntrySupportPage(pageFixture.page);
+    pageFixture.applicationsPage = new InsOrderEntryApplicationsPage(pageFixture.page);
 });
 
 After(async function ({ result, pickle }) {
@@ -101,8 +80,5 @@ After(async function ({ result, pickle }) {
 AfterAll(async function () {
     if (browser) {
         await browser.close();
-    }
-    if (pageFixture.logger) {
-        pageFixture.logger.close();
     }
 });
