@@ -1,0 +1,35 @@
+INFO: 2026-10-25 17:24:39: 	Starting scenario: Submit an application with multiple riders
+INFO: 2026-10-25 17:24:40: 	Initialized login page object
+INFO: 2026-10-25 17:24:40: 	Initialized products page object
+INFO: 2026-10-25 17:24:40: 	Initialized support page object
+INFO: 2026-10-25 17:24:40: 	Initialized applications page object
+INFO: 2026-10-25 17:24:40: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 17:24:40: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 17:24:40: 	Step: enter configured login credentials
+INFO: 2026-10-25 17:24:40: 	Entering configured login credentials
+INFO: 2026-10-25 17:24:40: 	Step: submit the login form
+INFO: 2026-10-25 17:24:40: 	Submitting the login form
+INFO: 2026-10-25 17:24:42: 	Step: verify authenticated navigation
+INFO: 2026-10-25 17:24:42: 	Checking authenticated navigation
+INFO: 2026-10-25 17:24:42: 	Step: prepare application scenario 'multipleRiders' through rider details
+INFO: 2026-10-25 17:24:42: 	Preparing configured application scenario 'multipleRiders'
+INFO: 2026-10-25 17:24:42: 	Preparing application scenario 'multipleRiders' through rider details
+INFO: 2026-10-25 17:24:42: 	Loading application scenario 'multipleRiders' from test data
+INFO: 2026-10-25 17:24:42: 	Creating a new application draft
+INFO: 2026-10-25 17:24:42: 	Opening the Applications page
+INFO: 2026-10-25 17:24:44: 	Filling configured client details for applicant 'standard'
+INFO: 2026-10-25 17:24:46: 	Filling configured address and contact details
+INFO: 2026-10-25 17:24:47: 	Filling configured KYC and financial details
+INFO: 2026-10-25 17:24:49: 	Filling product and policy details for 'secureBasic'
+INFO: 2026-10-25 17:24:50: 	Selecting 2 configured rider(s)
+INFO: 2026-10-25 17:24:51: 	Step: save configured beneficiaries and proceed to document upload
+INFO: 2026-10-25 17:24:51: 	Saving configured application beneficiaries
+INFO: 2026-10-25 17:24:51: 	Loading application scenario 'multipleRiders' from test data
+INFO: 2026-10-25 17:24:51: 	Filling configured beneficiary 'adultPrimary'
+INFO: 2026-10-25 17:24:53: 	Step: review, validate, and submit the application
+INFO: 2026-10-25 17:24:53: 	Reviewing, validating, and submitting application
+INFO: 2026-10-25 17:24:53: 	Continuing from document upload to application review
+INFO: 2026-10-25 17:24:54: 	Running review validation before submitting application
+INFO: 2026-10-25 17:24:56: 	Step: verify application submission confirmation
+INFO: 2026-10-25 17:24:56: 	Checking application submission confirmation
+INFO: 2026-10-25 17:24:56: 	Finishing scenario: Submit an application with multiple riders (PASSED)

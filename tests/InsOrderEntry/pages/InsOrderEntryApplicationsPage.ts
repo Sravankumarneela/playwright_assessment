@@ -1,5 +1,6 @@
 import { expect, Page } from "playwright/test";
 import path from "node:path";
+import { Logger } from "winston";
 import data from "../testdata/InsOrderEntrydata.json";
 
 type ScenarioKey = keyof typeof data.applications.scenarios;
@@ -11,13 +12,17 @@ type ApplicationScenario = (typeof data.applications.scenarios)[ScenarioKey];
 export class InsOrderEntryApplicationsPage {
     private activeScenarioKey?: string;
 
-    constructor(private readonly page: Page) {}
+    constructor(private readonly page: Page, private readonly logger: Logger) {
+        this.logger.info("Initialized applications page object");
+    }
 
     async openApplications(): Promise<void> {
+        this.logger.info("Opening the Applications page");
         await this.page.getByTestId(data.applications.testIds.navigationLink).click();
     }
 
     async expectApplicationsIndex(): Promise<void> {
+        this.logger.info("Checking Applications index content and table headers");
         await expect(this.page.getByRole("heading", { name: data.applications.text.indexHeading })).toBeVisible();
         await expect(this.page.getByText(data.applications.text.indexDescription)).toBeVisible();
         await expect(this.page.getByTestId(data.applications.testIds.newButton)).toBeVisible();
@@ -30,6 +35,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     async submitConfiguredApplication(scenarioKey: string): Promise<void> {
+        this.logger.info(`Submitting configured application scenario '${scenarioKey}'`);
         await this.prepareToBeneficiaries(scenarioKey);
         await this.saveConfiguredBeneficiaries();
         await this.continueFromDocumentsToReview();
@@ -37,10 +43,12 @@ export class InsOrderEntryApplicationsPage {
     }
 
     async prepareConfiguredApplication(scenarioKey: string): Promise<void> {
+        this.logger.info(`Preparing configured application scenario '${scenarioKey}'`);
         await this.prepareToBeneficiaries(scenarioKey);
     }
 
     async saveConfiguredBeneficiaries(): Promise<void> {
+        this.logger.info("Saving configured application beneficiaries");
         if (!this.activeScenarioKey) {
             throw new Error("Prepare an application before saving its beneficiaries.");
         }
@@ -55,6 +63,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     async uploadTestDocument(): Promise<void> {
+        this.logger.info("Uploading configured application test document");
         const uploadInput = this.page.locator('input[type="file"]').first();
         const fileName = data.applications.documents.testFile;
         const filePath = path.resolve(__dirname, "../testdata", fileName);
@@ -63,22 +72,26 @@ export class InsOrderEntryApplicationsPage {
     }
 
     async reviewAndSubmitApplication(): Promise<void> {
+        this.logger.info("Reviewing, validating, and submitting application");
         await this.continueFromDocumentsToReview();
         await this.validateAndSubmit();
     }
 
     private async continueFromDocumentsToReview(): Promise<void> {
+        this.logger.info("Continuing from document upload to application review");
         await this.page.getByTestId(data.applications.testIds.documentsContinue).click();
         await expect(this.page.getByRole("heading", { name: data.applications.text.reviewHeading })).toBeVisible();
     }
 
     private async validateAndSubmit(): Promise<void> {
+        this.logger.info("Running review validation before submitting application");
         await this.page.getByTestId(data.applications.testIds.reviewValidate).click();
         await expect(this.page.getByTestId(data.applications.testIds.reviewValidationPassed)).toBeVisible();
         await this.page.getByTestId(data.applications.testIds.reviewSubmit).click();
     }
 
     async expectSubmissionConfirmation(): Promise<void> {
+        this.logger.info("Checking application submission confirmation");
         const confirmation = this.page.getByTestId(data.applications.testIds.submissionConfirmation);
         await expect(confirmation.getByText(data.applications.text.submittedHeading)).toBeVisible();
         await expect(confirmation.getByText(data.applications.text.submittedMessage)).toBeVisible();
@@ -86,6 +99,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     async attemptInvalidBeneficiaryEmail(): Promise<void> {
+        this.logger.info("Attempting to save configured beneficiary with invalid email");
         if (!this.activeScenarioKey) {
             throw new Error("Prepare an application before entering its beneficiary.");
         }
@@ -96,6 +110,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     async expectInvalidBeneficiaryEmailReviewError(): Promise<void> {
+        this.logger.info("Checking beneficiary email validation error on review page");
         await this.page.getByTestId(data.applications.testIds.beneficiaryContinue).click();
         await this.page.getByTestId(data.applications.testIds.documentsContinue).click();
         await this.page.getByTestId(data.applications.testIds.reviewValidate).click();
@@ -106,16 +121,19 @@ export class InsOrderEntryApplicationsPage {
     }
 
     async prepareApplicationForReview(scenarioKey: string): Promise<void> {
+        this.logger.info(`Preparing configured application scenario '${scenarioKey}' for review`);
         await this.prepareToBeneficiaries(scenarioKey);
         await this.saveConfiguredBeneficiaries();
         await this.continueFromDocumentsToReview();
     }
 
     async runReviewValidation(): Promise<void> {
+        this.logger.info("Running application review validation");
         await this.page.getByTestId(data.applications.testIds.reviewValidate).click();
     }
 
     async expectConfiguredReviewValidationError(scenarioKey: string): Promise<void> {
+        this.logger.info(`Checking configured review validation error for '${scenarioKey}'`);
         const errorMessage = data.applications.validationErrors[scenarioKey as keyof typeof data.applications.validationErrors];
         if (!errorMessage) {
             throw new Error(`No configured validation error for application scenario: ${scenarioKey}`);
@@ -126,6 +144,7 @@ export class InsOrderEntryApplicationsPage {
         await expect(errors.getByText(errorMessage)).toBeVisible();
     }
     async createDraftAndOpenSummary(scenarioKey: string): Promise<void> {
+        this.logger.info(`Creating application draft and opening summary for '${scenarioKey}'`);
         const scenario = this.getScenario(scenarioKey);
         await this.createDraft();
         await this.fillClient(scenario.applicantKey);
@@ -134,6 +153,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     async expectConfiguredSummary(scenarioKey: string): Promise<void> {
+        this.logger.info(`Checking configured application summary for '${scenarioKey}'`);
         const scenario = this.getScenario(scenarioKey);
         const applicant = data.applications.applicants[scenario.applicantKey as ApplicantKey];
 
@@ -149,6 +169,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     async prepareToBeneficiaries(scenarioKey: string): Promise<void> {
+        this.logger.info(`Preparing application scenario '${scenarioKey}' through rider details`);
         const scenario = this.getScenario(scenarioKey);
         this.activeScenarioKey = scenarioKey;
         await this.createDraft();
@@ -165,6 +186,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     private async createDraft(): Promise<void> {
+        this.logger.info("Creating a new application draft");
         await this.openApplications();
         await this.page.getByTestId(data.applications.testIds.newButton).click();
         await this.page.getByTestId(data.applications.testIds.createDraftButton).click();
@@ -172,6 +194,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     private async fillClient(applicantKey: string): Promise<void> {
+        this.logger.info(`Filling configured client details for applicant '${applicantKey}'`);
         const applicant = data.applications.applicants[applicantKey as ApplicantKey];
         const ids = data.applications.testIds;
 
@@ -188,6 +211,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     private async fillAddressContact(contactEmailOverride?: string): Promise<void> {
+        this.logger.info("Filling configured address and contact details");
         const address = data.applications.address;
         const ids = data.applications.testIds;
 
@@ -215,6 +239,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     private async fillKycFinancial(): Promise<void> {
+        this.logger.info("Filling configured KYC and financial details");
         const financial = data.applications.financial;
         const ids = data.applications.testIds;
 
@@ -235,6 +260,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     private async fillProduct(scenario: ApplicationScenario): Promise<void> {
+        this.logger.info(`Filling product and policy details for '${scenario.productKey}'`);
         const product = data.products.catalog[scenario.productKey as ProductKey];
         const ids = data.applications.testIds;
 
@@ -246,6 +272,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     private async fillRiders(scenario: ApplicationScenario): Promise<void> {
+        this.logger.info(`Selecting ${scenario.riders.length} configured rider(s)`);
         const ids = data.applications.testIds;
 
         for (const rider of scenario.riders) {
@@ -257,6 +284,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     private async fillBeneficiary(beneficiaryKey: string): Promise<void> {
+        this.logger.info(`Filling configured beneficiary '${beneficiaryKey}'`);
         const beneficiary = data.applications.beneficiaries[beneficiaryKey as BeneficiaryKey];
         const ids = data.applications.testIds;
 
@@ -291,6 +319,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     private async openReview(): Promise<void> {
+        this.logger.info("Opening application review from beneficiary and document steps");
         const ids = data.applications.testIds;
 
         await this.page.getByTestId(ids.beneficiaryContinue).click();
@@ -299,6 +328,7 @@ export class InsOrderEntryApplicationsPage {
     }
 
     private getScenario(scenarioKey: string) {
+        this.logger.info(`Loading application scenario '${scenarioKey}' from test data`);
         const scenario = data.applications.scenarios[scenarioKey as ScenarioKey];
         if (!scenario) {
             throw new Error(`Unknown application scenario: ${scenarioKey}`);

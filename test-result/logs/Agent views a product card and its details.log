@@ -1,0 +1,88 @@
+INFO: 2026-10-25 17:27:20: 	Starting scenario: Agent views a product card and its details
+INFO: 2026-10-25 17:27:21: 	Initialized login page object
+INFO: 2026-10-25 17:27:21: 	Initialized products page object
+INFO: 2026-10-25 17:27:21: 	Initialized support page object
+INFO: 2026-10-25 17:27:21: 	Initialized applications page object
+INFO: 2026-10-25 17:27:21: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 17:27:21: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 17:27:21: 	Step: enter configured login credentials
+INFO: 2026-10-25 17:27:21: 	Entering configured login credentials
+INFO: 2026-10-25 17:27:21: 	Step: submit the login form
+INFO: 2026-10-25 17:27:21: 	Submitting the login form
+INFO: 2026-10-25 17:27:23: 	Step: open the Products tab
+INFO: 2026-10-25 17:27:23: 	Opening product catalog from navigation
+INFO: 2026-10-25 17:27:24: 	Step: verify configured product card 'eliteLegacy'
+INFO: 2026-10-25 17:27:24: 	Checking configured product card 'eliteLegacy'
+INFO: 2026-10-25 17:27:24: 	Step: open details for configured product 'eliteLegacy'
+INFO: 2026-10-25 17:27:24: 	Opening details for configured product 'eliteLegacy'
+INFO: 2026-10-25 17:27:24: 	Step: verify configured product details for 'eliteLegacy'
+INFO: 2026-10-25 17:27:24: 	Checking configured product details for 'eliteLegacy'
+INFO: 2026-10-25 17:27:24: 	Step: verify Products back link
+INFO: 2026-10-25 17:27:24: 	Checking Products back link
+INFO: 2026-10-25 17:27:24: 	Finishing scenario: Agent views a product card and its details (PASSED)
+INFO: 2026-10-25 17:27:25: 	Starting scenario: Agent views a product card and its details
+INFO: 2026-10-25 17:27:25: 	Initialized login page object
+INFO: 2026-10-25 17:27:25: 	Initialized products page object
+INFO: 2026-10-25 17:27:25: 	Initialized support page object
+INFO: 2026-10-25 17:27:25: 	Initialized applications page object
+INFO: 2026-10-25 17:27:25: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 17:27:25: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 17:27:25: 	Step: enter configured login credentials
+INFO: 2026-10-25 17:27:25: 	Entering configured login credentials
+INFO: 2026-10-25 17:27:25: 	Step: submit the login form
+INFO: 2026-10-25 17:27:25: 	Submitting the login form
+INFO: 2026-10-25 17:27:27: 	Step: open the Products tab
+INFO: 2026-10-25 17:27:27: 	Opening product catalog from navigation
+INFO: 2026-10-25 17:27:28: 	Step: verify configured product card 'flexiPay'
+INFO: 2026-10-25 17:27:28: 	Checking configured product card 'flexiPay'
+INFO: 2026-10-25 17:27:28: 	Step: open details for configured product 'flexiPay'
+INFO: 2026-10-25 17:27:28: 	Opening details for configured product 'flexiPay'
+INFO: 2026-10-25 17:27:28: 	Step: verify configured product details for 'flexiPay'
+INFO: 2026-10-25 17:27:28: 	Checking configured product details for 'flexiPay'
+INFO: 2026-10-25 17:27:29: 	Step: verify Products back link
+INFO: 2026-10-25 17:27:29: 	Checking Products back link
+INFO: 2026-10-25 17:27:29: 	Finishing scenario: Agent views a product card and its details (PASSED)
+INFO: 2026-10-25 17:27:29: 	Starting scenario: Agent views a product card and its details
+INFO: 2026-10-25 17:27:29: 	Initialized login page object
+INFO: 2026-10-25 17:27:29: 	Initialized products page object
+INFO: 2026-10-25 17:27:29: 	Initialized support page object
+INFO: 2026-10-25 17:27:29: 	Initialized applications page object
+INFO: 2026-10-25 17:27:29: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 17:27:29: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 17:27:29: 	Step: enter configured login credentials
+INFO: 2026-10-25 17:27:29: 	Entering configured login credentials
+INFO: 2026-10-25 17:27:30: 	Step: submit the login form
+INFO: 2026-10-25 17:27:30: 	Submitting the login form
+INFO: 2026-10-25 17:27:31: 	Step: open the Products tab
+INFO: 2026-10-25 17:27:31: 	Opening product catalog from navigation
+INFO: 2026-10-25 17:27:32: 	Step: verify configured product card 'secureBasic'
+INFO: 2026-10-25 17:27:32: 	Checking configured product card 'secureBasic'
+INFO: 2026-10-25 17:27:32: 	Step: open details for configured product 'secureBasic'
+INFO: 2026-10-25 17:27:32: 	Opening details for configured product 'secureBasic'
+INFO: 2026-10-25 17:27:32: 	Step: verify configured product details for 'secureBasic'
+INFO: 2026-10-25 17:27:32: 	Checking configured product details for 'secureBasic'
+INFO: 2026-10-25 17:27:32: 	Step: verify Products back link
+INFO: 2026-10-25 17:27:32: 	Checking Products back link
+INFO: 2026-10-25 17:27:32: 	Finishing scenario: Agent views a product card and its details (PASSED)
+INFO: 2026-10-25 17:27:33: 	Starting scenario: Agent views a product card and its details
+INFO: 2026-10-25 17:27:33: 	Initialized login page object
+INFO: 2026-10-25 17:27:33: 	Initialized products page object
+INFO: 2026-10-25 17:27:33: 	Initialized support page object
+INFO: 2026-10-25 17:27:33: 	Initialized applications page object
+INFO: 2026-10-25 17:27:33: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 17:27:33: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 17:27:33: 	Step: enter configured login credentials
+INFO: 2026-10-25 17:27:33: 	Entering configured login credentials
+INFO: 2026-10-25 17:27:34: 	Step: submit the login form
+INFO: 2026-10-25 17:27:34: 	Submitting the login form
+INFO: 2026-10-25 17:27:35: 	Step: open the Products tab
+INFO: 2026-10-25 17:27:35: 	Opening product catalog from navigation
+INFO: 2026-10-25 17:27:36: 	Step: verify configured product card 'wealthBuilder'
+INFO: 2026-10-25 17:27:36: 	Checking configured product card 'wealthBuilder'
+INFO: 2026-10-25 17:27:36: 	Step: open details for configured product 'wealthBuilder'
+INFO: 2026-10-25 17:27:36: 	Opening details for configured product 'wealthBuilder'
+INFO: 2026-10-25 17:27:36: 	Step: verify configured product details for 'wealthBuilder'
+INFO: 2026-10-25 17:27:36: 	Checking configured product details for 'wealthBuilder'
+INFO: 2026-10-25 17:27:36: 	Step: verify Products back link
+INFO: 2026-10-25 17:27:36: 	Checking Products back link
+INFO: 2026-10-25 17:27:36: 	Finishing scenario: Agent views a product card and its details (PASSED)

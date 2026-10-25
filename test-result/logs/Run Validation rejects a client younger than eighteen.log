@@ -1,0 +1,33 @@
+INFO: 2026-10-25 17:25:49: 	Starting scenario: Run Validation rejects a client younger than eighteen
+INFO: 2026-10-25 17:25:49: 	Initialized login page object
+INFO: 2026-10-25 17:25:49: 	Initialized products page object
+INFO: 2026-10-25 17:25:49: 	Initialized support page object
+INFO: 2026-10-25 17:25:49: 	Initialized applications page object
+INFO: 2026-10-25 17:25:49: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 17:25:49: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 17:25:49: 	Step: enter configured login credentials
+INFO: 2026-10-25 17:25:49: 	Entering configured login credentials
+INFO: 2026-10-25 17:25:50: 	Step: submit the login form
+INFO: 2026-10-25 17:25:50: 	Submitting the login form
+INFO: 2026-10-25 17:25:51: 	Step: verify authenticated navigation
+INFO: 2026-10-25 17:25:51: 	Checking authenticated navigation
+INFO: 2026-10-25 17:25:51: 	Step: prepare application scenario 'underageClient' for review
+INFO: 2026-10-25 17:25:51: 	Preparing configured application scenario 'underageClient' for review
+INFO: 2026-10-25 17:25:51: 	Preparing application scenario 'underageClient' through rider details
+INFO: 2026-10-25 17:25:51: 	Loading application scenario 'underageClient' from test data
+INFO: 2026-10-25 17:25:51: 	Creating a new application draft
+INFO: 2026-10-25 17:25:51: 	Opening the Applications page
+INFO: 2026-10-25 17:25:54: 	Filling configured client details for applicant 'underage'
+INFO: 2026-10-25 17:25:55: 	Filling configured address and contact details
+INFO: 2026-10-25 17:25:56: 	Filling configured KYC and financial details
+INFO: 2026-10-25 17:25:57: 	Filling product and policy details for 'secureBasic'
+INFO: 2026-10-25 17:25:59: 	Selecting 0 configured rider(s)
+INFO: 2026-10-25 17:26:00: 	Saving configured application beneficiaries
+INFO: 2026-10-25 17:26:00: 	Loading application scenario 'underageClient' from test data
+INFO: 2026-10-25 17:26:00: 	Filling configured beneficiary 'adultPrimary'
+INFO: 2026-10-25 17:26:02: 	Continuing from document upload to application review
+INFO: 2026-10-25 17:26:02: 	Step: run application review validation
+INFO: 2026-10-25 17:26:02: 	Running application review validation
+INFO: 2026-10-25 17:26:03: 	Step: verify configured review validation error for 'underageClient'
+INFO: 2026-10-25 17:26:03: 	Checking configured review validation error for 'underageClient'
+INFO: 2026-10-25 17:26:03: 	Finishing scenario: Run Validation rejects a client younger than eighteen (PASSED)

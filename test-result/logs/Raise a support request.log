@@ -1,0 +1,20 @@
+INFO: 2026-10-25 17:27:40: 	Starting scenario: Raise a support request
+INFO: 2026-10-25 17:27:40: 	Initialized login page object
+INFO: 2026-10-25 17:27:40: 	Initialized products page object
+INFO: 2026-10-25 17:27:40: 	Initialized support page object
+INFO: 2026-10-25 17:27:40: 	Initialized applications page object
+INFO: 2026-10-25 17:27:40: 	Step: open the InsOrderEntry login page
+INFO: 2026-10-25 17:27:40: 	Opening the InsOrderEntry login page
+INFO: 2026-10-25 17:27:41: 	Step: enter configured login credentials
+INFO: 2026-10-25 17:27:41: 	Entering configured login credentials
+INFO: 2026-10-25 17:27:41: 	Step: submit the login form
+INFO: 2026-10-25 17:27:41: 	Submitting the login form
+INFO: 2026-10-25 17:27:43: 	Step: verify authenticated navigation
+INFO: 2026-10-25 17:27:43: 	Checking authenticated navigation
+INFO: 2026-10-25 17:27:43: 	Step: open the Support tab
+INFO: 2026-10-25 17:27:43: 	Opening support page from navigation
+INFO: 2026-10-25 17:27:43: 	Step: submit configured support request
+INFO: 2026-10-25 17:27:43: 	Submitting configured support request
+INFO: 2026-10-25 17:27:44: 	Step: verify support request confirmation
+INFO: 2026-10-25 17:27:44: 	Checking support request confirmation
+INFO: 2026-10-25 17:27:44: 	Finishing scenario: Raise a support request (PASSED)

@@ -1,17 +1,22 @@
 import { expect, Page } from "playwright/test";
+import { Logger } from "winston";
 import data from "../testdata/InsOrderEntrydata.json";
 
 type ProductKey = keyof typeof data.products.catalog;
 
 export class InsOrderEntryProductsPage {
-    constructor(private readonly page: Page) {}
+    constructor(private readonly page: Page, private readonly logger: Logger) {
+        this.logger.info("Initialized products page object");
+    }
 
     async openFromNavigation(): Promise<void> {
+        this.logger.info("Opening product catalog from navigation");
         await this.page.getByTestId(data.products.testIds.navigationLink).click();
         await expect(this.page.getByRole("heading", { name: data.products.catalogHeading })).toBeVisible();
     }
 
     async expectProductCard(productKey: string): Promise<void> {
+        this.logger.info(`Checking configured product card '${productKey}'`);
         const product = data.products.catalog[productKey as ProductKey];
 
         await expect(this.page.getByText(product.catalogText)).toBeVisible();
@@ -21,11 +26,13 @@ export class InsOrderEntryProductsPage {
     }
 
     async openProductDetails(productKey: string): Promise<void> {
+        this.logger.info(`Opening details for configured product '${productKey}'`);
         const product = data.products.catalog[productKey as ProductKey];
         await this.page.getByTestId(`${data.products.testIds.detailsButtonPrefix}${product.code}`).click();
     }
 
     async expectProductDetails(productKey: string): Promise<void> {
+        this.logger.info(`Checking configured product details for '${productKey}'`);
         const product = data.products.catalog[productKey as ProductKey];
 
         await expect(this.page.getByTestId(data.products.testIds.detailPage)).toBeVisible();
@@ -40,6 +47,7 @@ export class InsOrderEntryProductsPage {
     }
 
     async expectBackLink(): Promise<void> {
+        this.logger.info("Checking Products back link");
         await expect(this.page.getByTestId(data.products.testIds.backLink)).toBeVisible();
     }
 }
